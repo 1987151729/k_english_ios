@@ -1,0 +1,233 @@
+/* 
+  Localizable.strings
+  App
+
+  Created by kila on 05/02/2018.
+  Copyright © 2018 kila. All rights reserved.
+*/
+
+/* ""=""; */
+
+//"a"="ss";
+//"a"="ss";
+
+/* 主页 */
+"main_tab_home"="广场";
+"main_tab_find"="发现";
+"main_tab_news"="聊天";
+"main_tab_mine"="我";
+
+/* 未登录页 */
+"not_login_title"="未登录";
+"not_login_login"="登录";
+"not_login_register_email"="注册";
+/* 邮箱注册页面 */
+"register_email_title"="注册";
+"register_email_upload_avatar"="头像";
+"register_email_txt_email"="邮 箱";
+"register_email_txt_password"="密 码";
+"register_email_btn_verification_code"="验证码";
+"register_email_txt_verification_code"="验证码";
+"register_email_txt_name"="昵 称";
+
+"register_email_edit_hint_email"="邮 箱";
+"register_email_edit_hint_password"="密 码";
+"register_email_edit_hint_verification_code"="验证码";
+"register_email_edit_hint_name"="昵 称";
+
+"register_email_txt_male"="帅哥";
+"register_email_txt_female"="美女";
+"register_email_btn_ok"="完 成";
+"register_email_btn_no_email"="没有邮箱？用户名注册";
+
+/* 登录页面 */
+"login_title"="登录";
+"login_txt_username"="邮 箱";
+"login_txt_password"="密 码";
+"login_edit_hint_username"="邮 箱";
+"login_edit_hint_password"="密 码";
+"login_btn_ok"="确 定";
+"login_btn_forget_password"="忘记密码？";
+
+/* 忘记密码页面 */
+"forget_password_title"="修改密码";
+"forget_password_txt_email"="邮箱";
+"forget_password_txt_password"="新密码";
+"forget_password_txt_confirm_password"="确认密码";
+"forget_password_edit_hint_email"="邮 箱";
+"forget_password_edit_hint_password"="密 码";
+"forget_password_edit_hint_confirm_password"="确认密码";
+"forget_password_btn_verification_code"="验证码";
+"forget_password_txt_verification_code"="验证码";
+"forget_password_edit_hint_verification_code"="验证码";
+"forget_password_btn_ok"="确 定";
+
+/* 首页 */
+"home_title"="广场";
+"home_tab_a"="大家在说";
+"home_txt_publish"="我要说";
+/* 发现 */
+"find_title"="发现";
+"find_tab_a"="单词";
+"find_tab_b"="句子";
+"find_tab_c"="歌曲";
+/* 词汇 */
+"word_tab_a"="常用";
+"word_tab_b"="四级";
+"word_tab_c"="六级";
+/* 句子 */
+"sentence_tab_a"="常用";
+"sentence_tab_b"="励志";
+"sentence_tab_c"="骂人";
+/* 个人中心页面 */
+"mine_title"="个人中心";
+"mine_txt_attention"="关注与粉丝";
+"mine_txt_visitor"="最近访客";
+"mine_txt_blog"="我的说说";
+"mine_txt_vip"="VIP";
+"mine_txt_gift"="礼物";
+"mine_txt_wallet"="钱包";
+"mine_txt_pal_beg"="笔友请求";
+"mine_txt_pal"="笔友";
+"mine_txt_letter"="书信往来";
+"mine_txt_settings"="设置";
+"mine_btn_edit"="编辑资料";
+/* 个人中心-设置页面 */
+"settings_btn_settings"="设置";
+/* 个人信息页面(自己) */
+"user_info_title_me"="我";
+"user_info_txt_name"="昵称";
+"user_info_txt_constellation"="星座";
+"user_info_txt_birth"="生日";
+"user_info_txt_city"="城市";
+/* 个人信息页面(别人) */
+"user_info_other_title_ta"="TA";
+"user_info_other_txt_name"="昵称";
+"user_info_other_txt_constellation"="星座";
+"user_info_other_txt_birth"="生日";
+"user_info_other_txt_city"="TA在";
+"user_info_other_txt_blog"="TA的说说";
+"user_info_other_txt_attention"="关注";
+"user_info_other_tab_letter"="书信";
+"user_info_other_tab_chat"="聊天";
+/* 个人信息-编辑页面 */
+"user_info_edit_title"="编辑个人资料";
+"user_info_edit_txt_avatar"="头像";
+"user_info_edit_txt_album"="相册";
+"user_info_edit_txt_name"="昵称";
+"user_info_edit_txt_constellation"="星座";
+"user_info_edit_txt_birth"="生日";
+"user_info_edit_txt_city"="城市";
+/* 个人信息-编辑-头像 */
+"user_info_edit_avatar_title"="更改头像";
+/* 个人信息-编辑-相册 */
+"user_info_edit_album_title"="更改相册";
+/* 个人信息-编辑-昵称 */
+"user_info_edit_name_title"="更改昵称";
+"user_info_edit_name_edit_hint_content"="请输入昵称...";
+/* 个人信息-编辑-生日 */
+"user_info_edit_birth_title"="更改生日";
+"user_info_edit_birth_txt_age"="年龄";
+"user_info_edit_birth_txt_constellation"="星座";
+"user_info_edit_birth_txt_tip"="选择你的出生日期，系统会自动算出年龄和星座。";
+/* 个人信息-编辑-城市 */
+"user_info_edit_city_title"="更改城市";
+/* 个人信息-编辑-修改密码 */
+"user_info_edit_password_title"="更改密码";
+"user_info_edit_password_txt_password"="新密码";
+"user_info_edit_password_edit_hint_password"="6~12个字符";
+"user_info_edit_password_txt_confirm_password"="确认密码";
+"user_info_edit_password_edit_hint_confirm_password"="必须与新密码一致";
+/* 说说列表（公开的）页面 */
+"blog_public_title"="";
+/* 说说详情（公开的）页面 */
+"blog_info_public_txt_comment"="评论";
+"blog_info_public_txt_like"="点赞";
+"blog_info_public_btn_comment"="我来评论";
+"blog_info_public_btn_like"="赞一个";
+/* 说说评论页面 */
+"blog_comment_title"="评论";
+"blog_comment_tip_a"="请填写评论内容！";
+"blog_comment_tip_b"="评论成功！";
+"blog_comment_tip_c"="评论失败！";
+"blog_comment_tip_d"="";
+/* 说说发布页面 */
+"blog_publish_title"="发个说说";
+"blog_publish_edit_hint_content"="请输入内容...";
+"blog_publish_txt_img"="拖拽图片可调整顺序";
+/* 翻译页面 */
+"translate_title"="翻译";
+"translate_txt_ch"="中文";
+"translate_txt_en"="英文";
+"translate_edit_hint_content"="请输入您想翻译的文字";
+"translate_txt_original_word"="翻译内容：";
+"translate_txt_translation_word"="翻译结果：";
+"translate_tips_content_empty"="请填写内容";
+/* 音乐详情页面 */
+"music_info_txt_description"="简介：";
+"music_info_txt_lyric"="歌词：";
+/* 图片浏览器页面 */
+"image_browser_indicator"="%1$d/%2$d";
+/* 消息页面 */
+"news_tab_chat"="聊天";
+/* 聊天页面 */
+"chat_txt_pay"="每日前%1$d条免费；非VIP每条花费%2$s%3$s；VIP无限量。";
+/* 笔友请求-（发出的）页面 */
+"pal_beg_send_title"="我发出的笔友请求";
+/* 笔友请求-（接收的）页面 */
+"pal_beg_receive_title"="我收到的笔友请求";
+"pal_beg_receive_list_item_btn_refuse"="拒绝";
+"pal_beg_receive_list_item_btn_accept"="接受";
+/* 笔友-（我包养的）页面 */
+"pal_send_title"="我的笔友";
+/* 笔友-（包养我的）页面 */
+"pal_receive_title"="我的笔友";
+/* 书信-（发出的）页面 */
+"letter_send_title"="我发出的";
+/* 书信-（接收的）页面 */
+"letter_receive_title"="我收到的";
+/* 书信-发布页面 */
+"letter_publish_title"="书信";
+"letter_publish_txt_pay"="每日前%1$d封免费；非VIP每封花费%2$s%3$s；VIP无限量。";
+"letter_publish_edit_hint_content"="请输入内容...";
+/* 关注与粉丝页面 */
+"attention_tab_send"="关注";
+"attention_tab_receive"="粉丝";
+/* 访客页面 */
+"visitor_tab_send"="我看过谁";
+"visitor_tab_receive"="谁看过我";
+/* 个人信息说说页面 */
+"blog_tab_private"="我发布的";
+"blog_tab_i_comment"="我评论的";
+"blog_other_title"="TA的说说";
+/* 钱包页面 */
+"wallet_title"="我的钱包";
+"wallet_txt_amount_active"="可用";
+"wallet_txt_amount_withdraw"="可提现";
+"wallet_btn_recharge"="充值";
+"wallet_btn_withdraw"="提现";
+/* 充值页面 */
+"wallet_recharge_title"="充值";
+/* 设置页面 */
+"settings_title"="系统设置";
+"settings_txt_password"="修改密码";
+"settings_txt_contact"="联系我们";
+"settings_txt_version"="版本信息";
+"settings_btn_logout"="退出账号";
+/* 联系我们页面 */
+"contact_title"="联系我们";
+"contact_txt_1"="您可以通过以下联系方式向我们反馈意见和建议：";
+"contact_txt_2"="1、发送电子邮件到support_it@foxmail.com。";
+
+/* 对话窗口-图片选择 */
+"dialog_add_image_option_take_picture"="拍照";
+"dialog_add_image_option_choose_picture"="文件";
+"dialog_add_image_option_cancel"="取消";
+/* 对话窗口-书信详情（接收的） */
+"dialog_letter_receive_info_option_refuse"="拒绝";
+"dialog_letter_receive_info_option_accept"="接受";
+"dialog_letter_receive_info_option_kiss"="回TA一个湿哒哒的吻";
+"dialog_letter_receive_info_option_cancel"="取消";
+/* 对话窗口-个人信息 */
+"dialog_user_info_option_pal_beg_send"="请求加为笔友";
+"dialog_user_info_option_cancel"="取消";

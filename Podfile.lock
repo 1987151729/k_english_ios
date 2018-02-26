@@ -1,0 +1,45 @@
+PODS:
+  - Alamofire (4.6.0)
+  - ESTabBarController-swift (2.5)
+  - Kingfisher (4.5.0)
+  - KMPlaceholderTextView (1.3.0)
+  - MJRefresh (3.1.15.1)
+  - ObjectMapper (3.1.0)
+  - PagingMenuController (2.2.0)
+  - pop (1.0.10)
+  - SKPhotoBrowser (5.0.0)
+  - SnapKit (4.0.0)
+  - SwiftyJSON (4.0.0)
+  - Toaster (2.1.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - ESTabBarController-swift
+  - Kingfisher (~> 4.0)
+  - KMPlaceholderTextView (~> 1.3.0)
+  - MJRefresh
+  - ObjectMapper (~> 3.1)
+  - PagingMenuController
+  - pop (~> 1.0)
+  - SKPhotoBrowser
+  - SnapKit (~> 4.0)
+  - SwiftyJSON
+  - Toaster
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  ESTabBarController-swift: 8daa432f2a9be8ebd25101dc46c84472fd760512
+  Kingfisher: 26ae0473102b77b575da51960c932431e3745407
+  KMPlaceholderTextView: 2bbcd19a273648a80a61e1e48f9743a24d8930e3
+  MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  PagingMenuController: 6176618987bb170096664f2da097313e45ed9c31
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  SKPhotoBrowser: fe936f878955a568c726bf05d14e1d2717d91ce0
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
+
+PODFILE CHECKSUM: 051d0d8faddeb1e3372dd0d4ae67d4a6e737c674
+
+COCOAPODS: 1.3.1
