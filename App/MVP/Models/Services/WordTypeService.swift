@@ -10,7 +10,7 @@ import UIKit
 
 class WordTypeService: NSObject {
     
-    static var MODULE: String = "word_type" // 模块
+    static let MODULE: String = "word_type" // 模块
     
     static func list(pageIndex: Int, pageSize: Int, callback: @escaping(Any) -> Void) -> Void{
         // 请求

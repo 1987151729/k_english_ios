@@ -32,7 +32,7 @@ class HxNineGridView: UIView {
     var width: CGFloat = 320 // NineGridView宽度（根据屏幕宽和当前HxNineGridView需要展示的真实宽度进行调整）
     var isTwoRowsTwoColumns: Bool = true  // 当4张照片时是否采用2行2列排版
     
-    var viewBox: UIView!
+    private var viewBox: UIView!
     
     // 图片列表
     var imageSrcs: [String] = [String]() {
@@ -126,7 +126,7 @@ class HxNineGridView: UIView {
         }
     }
     
-    @objc func onTapImageView(_ sender: UITapGestureRecognizer) {
+    @objc private func onTapImageView(_ sender: UITapGestureRecognizer) {
         if let view = sender.view?.superview as? HxNineGridViewCell {
             self.delegate?.onClickImageView(imageSrcs: self.imageSrcs, index: view.index!)
         }

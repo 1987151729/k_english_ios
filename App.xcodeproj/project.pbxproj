@@ -21,7 +21,7 @@
 		272A3F03201D5F2E00EF3958 /* AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272A3F02201D5F2E00EF3958 /* AppUITests.swift */; };
 		272A8BAF20350E1100BC3E33 /* BlogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272A8BAE20350E1100BC3E33 /* BlogService.swift */; };
 		272EA2F120415BCD0048E24A /* WordType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272EA2F020415BCD0048E24A /* WordType.swift */; };
-		272EA2F520415F270048E24A /* WordTypePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272EA2F420415F270048E24A /* WordTypePresenter.swift */; };
+		272EA2F520415F270048E24A /* WordTypeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272EA2F420415F270048E24A /* WordTypeViewPresenter.swift */; };
 		272EA2F720415F5D0048E24A /* WordTypeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272EA2F620415F5D0048E24A /* WordTypeViewProtocol.swift */; };
 		272EA2F9204160730048E24A /* WordTypeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272EA2F8204160730048E24A /* WordTypeService.swift */; };
 		272EA2FC20419B030048E24A /* WordTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272EA2FB20419B030048E24A /* WordTypeCollectionViewCell.swift */; };
@@ -61,10 +61,16 @@
 		27DCB99C2029535300D7AF76 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DCB99B2029535300D7AF76 /* MainNavigationController.swift */; };
 		27E668F22028743E0047A606 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27E668F42028743E0047A606 /* Localizable.strings */; };
 		27EE42672043B70700390361 /* SentenceTypeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE42662043B70700390361 /* SentenceTypeViewProtocol.swift */; };
-		27EE42692043B73000390361 /* SentenceTypePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE42682043B73000390361 /* SentenceTypePresenter.swift */; };
+		27EE42692043B73000390361 /* SentenceTypeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE42682043B73000390361 /* SentenceTypeViewPresenter.swift */; };
 		27EE426B2043B74800390361 /* SentenceTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE426A2043B74800390361 /* SentenceTypeCollectionViewCell.swift */; };
 		27EE426D2043B76200390361 /* SentenceTypeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE426C2043B76200390361 /* SentenceTypeService.swift */; };
 		27EE426F2043B77600390361 /* SentenceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE426E2043B77600390361 /* SentenceType.swift */; };
+		27EE42AB2043EDA600390361 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE42AA2043EDA600390361 /* Music.swift */; };
+		27EE42AD2043EDE400390361 /* MusicViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE42AC2043EDE400390361 /* MusicViewProtocol.swift */; };
+		27EE42AF2043EDF700390361 /* MusicViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE42AE2043EDF700390361 /* MusicViewPresenter.swift */; };
+		27EE42B12043EE0C00390361 /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE42B02043EE0C00390361 /* MusicTableViewCell.swift */; };
+		27EE42B32043EE2600390361 /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE42B22043EE2600390361 /* MusicService.swift */; };
+		27EE42B52043FAB700390361 /* HxExpandTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EE42B42043FAB700390361 /* HxExpandTextView.swift */; };
 		4476F5784A079F4396903808 /* Pods_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0FDADB7DEC0478E5277CCE /* Pods_AppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,7 +111,7 @@
 		272A3F04201D5F2E00EF3958 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		272A8BAE20350E1100BC3E33 /* BlogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogService.swift; sourceTree = "<group>"; };
 		272EA2F020415BCD0048E24A /* WordType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordType.swift; sourceTree = "<group>"; };
-		272EA2F420415F270048E24A /* WordTypePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTypePresenter.swift; sourceTree = "<group>"; };
+		272EA2F420415F270048E24A /* WordTypeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTypeViewPresenter.swift; sourceTree = "<group>"; };
 		272EA2F620415F5D0048E24A /* WordTypeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTypeViewProtocol.swift; sourceTree = "<group>"; };
 		272EA2F8204160730048E24A /* WordTypeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTypeService.swift; sourceTree = "<group>"; };
 		272EA2FB20419B030048E24A /* WordTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTypeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -147,10 +153,16 @@
 		27E668F32028743E0047A606 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		27E668F5202874410047A606 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		27EE42662043B70700390361 /* SentenceTypeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceTypeViewProtocol.swift; sourceTree = "<group>"; };
-		27EE42682043B73000390361 /* SentenceTypePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceTypePresenter.swift; sourceTree = "<group>"; };
+		27EE42682043B73000390361 /* SentenceTypeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceTypeViewPresenter.swift; sourceTree = "<group>"; };
 		27EE426A2043B74800390361 /* SentenceTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceTypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		27EE426C2043B76200390361 /* SentenceTypeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceTypeService.swift; sourceTree = "<group>"; };
 		27EE426E2043B77600390361 /* SentenceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceType.swift; sourceTree = "<group>"; };
+		27EE42AA2043EDA600390361 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		27EE42AC2043EDE400390361 /* MusicViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewProtocol.swift; sourceTree = "<group>"; };
+		27EE42AE2043EDF700390361 /* MusicViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewPresenter.swift; sourceTree = "<group>"; };
+		27EE42B02043EE0C00390361 /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
+		27EE42B22043EE2600390361 /* MusicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicService.swift; sourceTree = "<group>"; };
+		27EE42B42043FAB700390361 /* HxExpandTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HxExpandTextView.swift; sourceTree = "<group>"; };
 		469F5ABAF4ED0CC5A44F5107 /* Pods-AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppUITests/Pods-AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B6E388B8C8077B079C35E4D /* Pods-AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppTests/Pods-AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		682B67F3C9F00AC3903C4C90 /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -316,8 +328,9 @@
 			children = (
 				278E92B32036780F005F4F72 /* BlogViewPresenter.swift */,
 				27A2A4C9202E8FA1004F8F94 /* TranslateViewPresenter.swift */,
-				272EA2F420415F270048E24A /* WordTypePresenter.swift */,
-				27EE42682043B73000390361 /* SentenceTypePresenter.swift */,
+				272EA2F420415F270048E24A /* WordTypeViewPresenter.swift */,
+				27EE42682043B73000390361 /* SentenceTypeViewPresenter.swift */,
+				27EE42AE2043EDF700390361 /* MusicViewPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -330,6 +343,7 @@
 				276C141F20347037004D524D /* User.swift */,
 				272EA2F020415BCD0048E24A /* WordType.swift */,
 				27EE426E2043B77600390361 /* SentenceType.swift */,
+				27EE42AA2043EDA600390361 /* Music.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -342,6 +356,7 @@
 				27A2A4CB202EE0B6004F8F94 /* TranslateService.swift */,
 				272EA2F8204160730048E24A /* WordTypeService.swift */,
 				27EE426C2043B76200390361 /* SentenceTypeService.swift */,
+				27EE42B22043EE2600390361 /* MusicService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -354,6 +369,7 @@
 				27A2A4C7202E8D2D004F8F94 /* TranslateViewProtocol.swift */,
 				272EA2F620415F5D0048E24A /* WordTypeViewProtocol.swift */,
 				27EE42662043B70700390361 /* SentenceTypeViewProtocol.swift */,
+				27EE42AC2043EDE400390361 /* MusicViewProtocol.swift */,
 			);
 			path = ViewProtocols;
 			sourceTree = "<group>";
@@ -406,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				278E92B72036CEA2005F4F72 /* BlogTableViewCell.swift */,
+				27EE42B02043EE0C00390361 /* MusicTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -415,6 +432,7 @@
 			children = (
 				27090B6B203AB55400C9C9D5 /* HxNineGridView */,
 				278A143F2026FB0500047482 /* ESTabBarContentView */,
+				27EE42B42043FAB700390361 /* HxExpandTextView.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -779,20 +797,24 @@
 				272A8BAF20350E1100BC3E33 /* BlogService.swift in Sources */,
 				276C142020347037004D524D /* User.swift in Sources */,
 				27EE426D2043B76200390361 /* SentenceTypeService.swift in Sources */,
-				27EE42692043B73000390361 /* SentenceTypePresenter.swift in Sources */,
+				27EE42AD2043EDE400390361 /* MusicViewProtocol.swift in Sources */,
+				27EE42692043B73000390361 /* SentenceTypeViewPresenter.swift in Sources */,
 				2780B35C201DBA3F00609001 /* LoginViewController.swift in Sources */,
 				27DCB99820293D7600D7AF76 /* NewsViewController.swift in Sources */,
 				272EA2F120415BCD0048E24A /* WordType.swift in Sources */,
+				27EE42B12043EE0C00390361 /* MusicTableViewCell.swift in Sources */,
 				278A144D2026FB0500047482 /* ExampleIrregularityContentView.swift in Sources */,
 				27A2A4CC202EE0B6004F8F94 /* TranslateService.swift in Sources */,
 				27A2A4CE202EEDD1004F8F94 /* Translate.swift in Sources */,
 				27A2A4C8202E8D2D004F8F94 /* TranslateViewProtocol.swift in Sources */,
 				2730E321202BDA5A00E71B0B /* MainNavigationController2.swift in Sources */,
+				27EE42B52043FAB700390361 /* HxExpandTextView.swift in Sources */,
 				278A14482026FB0500047482 /* ExampleBouncesContentView.swift in Sources */,
-				272EA2F520415F270048E24A /* WordTypePresenter.swift in Sources */,
+				272EA2F520415F270048E24A /* WordTypeViewPresenter.swift in Sources */,
 				272EA2F9204160730048E24A /* WordTypeService.swift in Sources */,
 				272EA2FC20419B030048E24A /* WordTypeCollectionViewCell.swift in Sources */,
 				27DCB99620293D5E00D7AF76 /* FindViewController.swift in Sources */,
+				27EE42AB2043EDA600390361 /* Music.swift in Sources */,
 				2780B35A201DB81700609001 /* ServicesManager.swift in Sources */,
 				27DCB99C2029535300D7AF76 /* MainNavigationController.swift in Sources */,
 				2748EFF92038691E008E9899 /* ObjectMapperDateTransform.swift in Sources */,
@@ -800,6 +822,8 @@
 				278E92B42036780F005F4F72 /* BlogViewPresenter.swift in Sources */,
 				272EA2F720415F5D0048E24A /* WordTypeViewProtocol.swift in Sources */,
 				272A3EE3201D5F2E00EF3958 /* AppDelegate.swift in Sources */,
+				27EE42B32043EE2600390361 /* MusicService.swift in Sources */,
+				27EE42AF2043EDF700390361 /* MusicViewPresenter.swift in Sources */,
 				278A144A2026FB0500047482 /* ExampleBasicContentView.swift in Sources */,
 				27DCB99A20293D8600D7AF76 /* MineViewController.swift in Sources */,
 				278A14472026FB0500047482 /* ExampleBackgroundContentView.swift in Sources */,

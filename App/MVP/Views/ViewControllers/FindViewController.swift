@@ -14,7 +14,7 @@ class FindViewController: UIViewController {
     
     // 属性定义
     // 非视图属性
-    var pagingMenuController: PagingMenuController!
+    private var pagingMenuController: PagingMenuController!
     // 视图属性（对于视图类的属性，在变量名前面加上一个字符“u”作为区分，便于识别。这是本人个人的习惯。）
     
     override func viewDidLoad() {
@@ -89,7 +89,7 @@ extension FindViewController{
         var defaultPage: Int = 0 // 下标从0开始
         
         //页面切换动画播放时间（秒）
-        var animationDuration: TimeInterval = 0.1
+        var animationDuration: TimeInterval = 0.3
         
         //是否允许手指左右滑动页面切换
         var isScrollEnabled: Bool = true
@@ -130,7 +130,7 @@ extension FindViewController{
             var height: CGFloat = 50
             
             //菜单切换动画播放时间（秒）
-            var animationDuration: TimeInterval = 0.1
+            var animationDuration: TimeInterval = 0.3
             
             //菜单切换动画减速率（默认为：UIScrollViewDecelerationRateFast）
             var deceleratingRate: CGFloat = UIScrollViewDecelerationRateFast

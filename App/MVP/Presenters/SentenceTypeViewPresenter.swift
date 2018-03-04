@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 import ObjectMapper
 
-class SentenceTypePresenter: NSObject {
+class SentenceTypeViewPresenter: NSObject {
     
     let viewProtocol: SentenceTypeViewProtocol?
     
@@ -33,7 +33,7 @@ class SentenceTypePresenter: NSObject {
                 let item = SentenceType(JSONString: raw.rawString()!)
                 list.append(item!)
             }
-            self.viewProtocol?.refresh(sentenceTypeList: list)
+            self.viewProtocol?.refresh(list: list)
         })
     }
     
@@ -49,7 +49,7 @@ class SentenceTypePresenter: NSObject {
                 let item = SentenceType(JSONString: raw.rawString()!)
                 list.append(item!)
             }
-            self.viewProtocol?.load(sentenceTypeList: list)
+            self.viewProtocol?.load(list: list)
         })
     }
 }

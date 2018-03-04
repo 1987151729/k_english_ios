@@ -18,9 +18,9 @@ protocol BlogViewProtocol: NSObjectProtocol {
     
     /* 操作的结果，对应的反馈 */
     // 下拉刷新
-    func refresh(blogList: [Blog])
+    func refresh(list: [Blog])
     // 上拉加载
-    func load(blogList: [Blog])
+    func load(list: [Blog])
     
     /* 操作过程中对应的友好的交互 */
 }

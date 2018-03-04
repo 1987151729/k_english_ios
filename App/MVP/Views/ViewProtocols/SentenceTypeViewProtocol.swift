@@ -18,9 +18,9 @@ protocol SentenceTypeViewProtocol: NSObjectProtocol {
     
     /* 操作的结果，对应的反馈 */
     // 下拉刷新
-    func refresh(sentenceTypeList: [SentenceType])
+    func refresh(list: [SentenceType])
     // 上拉加载
-    func load(sentenceTypeList: [SentenceType])
+    func load(list: [SentenceType])
     
     /* 操作过程中对应的友好的交互 */
 }

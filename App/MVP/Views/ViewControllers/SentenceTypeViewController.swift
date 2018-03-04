@@ -13,15 +13,15 @@ class SentenceTypeViewController: UIViewController {
     
     // 属性定义
     // 非视图属性
-    var presenter: SentenceTypePresenter?
-    var dataList: [SentenceType]!
-    var pageIndex: Int = 1 // 页码
-    let pageSize: Int = 20 // 每页大小
-    let forCellReuseIdentifier: String = "Cell"
+    private var presenter: SentenceTypeViewPresenter?
+    private var dataList: [SentenceType]!
+    private var pageIndex: Int = 1 // 页码
+    private let pageSize: Int = 20 // 每页大小
+    private let forCellReuseIdentifier: String = "Cell"
     // 视图属性（对于视图类的属性，在变量名前面加上一个字符“u”作为区分，便于识别。这是本人个人的习惯。）
-    var uCollectionView: UICollectionView?
-    var uHeaderView: MJRefreshNormalHeader? // 顶部刷新
-    var uFooterView: MJRefreshAutoNormalFooter? // 底部加载
+    private var uCollectionView: UICollectionView?
+    private var uHeaderView: MJRefreshNormalHeader? // 顶部刷新
+    private var uFooterView: MJRefreshAutoNormalFooter? // 底部加载
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,7 +110,7 @@ extension SentenceTypeViewController {
 extension SentenceTypeViewController {
     
     func initData(){
-        presenter = SentenceTypePresenter.init(viewProtocol: self)
+        presenter = SentenceTypeViewPresenter.init(viewProtocol: self)
         dataList = [SentenceType]()
         headerRefresh()
     }
@@ -197,18 +197,17 @@ extension SentenceTypeViewController: SentenceTypeViewProtocol {
         return self.pageSize
     }
     
-    func refresh(sentenceTypeList: [SentenceType]) {
-        dataList.removeAll()
-        dataList = dataList + sentenceTypeList
+    func refresh(list: [SentenceType]) {
+        self.dataList = list
         // 重新加载表格数据
         self.uCollectionView!.reloadData()
         // 结束刷新
         self.uCollectionView!.mj_header.endRefreshing()
     }
     
-    func load(sentenceTypeList: [SentenceType]) {
-        if 0 < sentenceTypeList.count {
-            dataList = dataList + sentenceTypeList
+    func load(list: [SentenceType]) {
+        if 0 < list.count {
+            self.dataList = self.dataList + list
             // 重新加载表格数据
             self.uCollectionView!.reloadData()
         }

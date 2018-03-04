@@ -1,8 +1,8 @@
 //
-//  BlogViewPresenter.swift
+//  WordTypePresenter.swift
 //  App
 //
-//  Created by kila on 16/02/2018.
+//  Created by kila on 24/02/2018.
 //  Copyright © 2018 kila. All rights reserved.
 //
 
@@ -10,12 +10,12 @@ import UIKit
 import SwiftyJSON
 import ObjectMapper
 
-class BlogViewPresenter: NSObject {
+class WordTypeViewPresenter: NSObject {
     
-    let viewProtocol: BlogViewProtocol?
+    let viewProtocol: WordTypeViewProtocol?
     
     // 构造函数
-    init(viewProtocol: BlogViewProtocol) {
+    init(viewProtocol: WordTypeViewProtocol) {
         self.viewProtocol = viewProtocol
     }
     
@@ -23,17 +23,15 @@ class BlogViewPresenter: NSObject {
     
     // 下拉刷新
     func refresh(){
-        let userID = ""
         let pageIndex = viewProtocol?.getPageIndex()
         let pageSize = viewProtocol?.getPageSize()
-        BlogService.list(userID: userID, pageIndex: pageIndex!, pageSize: pageSize!, callback:{(data: Any) -> Void in
+        WordTypeService.list(pageIndex: pageIndex!, pageSize: pageSize!, callback:{(data: Any) -> Void in
             let json = JSON(data)
             let jsonArray = json.arrayValue
-            var list = [Blog]()
+            var list = [WordType]()
             for raw in jsonArray{
-                let blog = Blog(JSONString: raw.rawString()!)
-                blog?.user = User(JSONString: raw.rawString()!)
-                list.append(blog!)
+                let item = WordType(JSONString: raw.rawString()!)
+                list.append(item!)
             }
             self.viewProtocol?.refresh(list: list)
         })
@@ -41,17 +39,15 @@ class BlogViewPresenter: NSObject {
     
     // 上拉加载
     func load(){
-        let userID = ""
         let pageIndex = viewProtocol?.getPageIndex()
         let pageSize = viewProtocol?.getPageSize()
-        BlogService.list(userID: userID, pageIndex: pageIndex!, pageSize: pageSize!, callback:{(data: Any) -> Void in
+        WordTypeService.list(pageIndex: pageIndex!, pageSize: pageSize!, callback:{(data: Any) -> Void in
             let json = JSON(data)
             let jsonArray = json.arrayValue
-            var list = [Blog]()
+            var list = [WordType]()
             for raw in jsonArray{
-                let blog = Blog(JSONString: raw.rawString()!)
-                blog?.user = User(JSONString: raw.rawString()!)
-                list.append(blog!)
+                let item = WordType(JSONString: raw.rawString()!)
+                list.append(item!)
             }
             self.viewProtocol?.load(list: list)
         })

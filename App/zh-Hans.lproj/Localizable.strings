@@ -231,3 +231,9 @@
 /* 对话窗口-个人信息 */
 "dialog_user_info_option_pal_beg_send"="请求加为笔友";
 "dialog_user_info_option_cancel"="取消";
+
+
+// 其他
+/* ExpandTextView */
+"expand_txt_no"="全文";
+"expand_txt_yes"="收起";

@@ -16,21 +16,21 @@ class TranslateViewController: UIViewController {
     
     // 属性定义
     // 非视图属性
-    var presenter: TranslateViewPresenter?
-    var type: Int = TranslateType.EnToCh.rawValue
+    private var presenter: TranslateViewPresenter?
+    private var type: Int = TranslateType.EnToCh.rawValue
     var translate: Translate?
     // 视图属性（对于视图类的属性，在变量名前面加上一个字符“u”作为区分，便于识别。这是本人个人的习惯。）
-    var uBtnNavLeft: UIButton!
-    var uLabelA: UILabel!
-    var uLabelB: UILabel!
-    var uViewTopBar: UIView!
-    var uTxtContent: KMPlaceholderTextView!
-    var uTxtResult: UITextView!
-    var uBtnPlay: UIButton!
-    var uBtnBar: UIButton!
-    var uAVPlayer: AVPlayer!
-    var uAVPlayerLayer: AVPlayerLayer!
-    var uViewLoading: UIActivityIndicatorView!
+    private var uBtnNavLeft: UIButton!
+    private var uLabelA: UILabel!
+    private var uLabelB: UILabel!
+    private var uViewTopBar: UIView!
+    private var uTxtContent: KMPlaceholderTextView!
+    private var uTxtResult: UITextView!
+    private var uBtnPlay: UIButton!
+    private var uBtnBar: UIButton!
+    private var uAVPlayer: AVPlayer!
+    private var uAVPlayerLayer: AVPlayerLayer!
+    private var uViewLoading: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

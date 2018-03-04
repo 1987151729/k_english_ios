@@ -11,7 +11,7 @@ import UIKit
 class SentenceTypeCollectionViewCell: UICollectionViewCell {
     
     var uImgBackground: UIImageView!
-    var uImgLogo: UIImageView!
+    var uImg: UIImageView!
     var uLabelName: UILabel!
     var uLabelDescription: UILabel!
     
@@ -20,7 +20,7 @@ class SentenceTypeCollectionViewCell: UICollectionViewCell {
         
         if !self.isEqual(nil) {
             uImgBackground = UIImageView(image: UIImage(named:"icon_rectangle_bg3"))
-            uImgLogo = UIImageView(image: UIImage(named:"icon_c"))
+            uImg = UIImageView(image: UIImage(named:"icon_c"))
             uLabelName = UILabel()
             uLabelDescription = UILabel()
             
@@ -33,7 +33,7 @@ class SentenceTypeCollectionViewCell: UICollectionViewCell {
             uLabelDescription.textColor = ColorUtil.rgbColorFromHex(hex: Constants.Colors.COLOR_TXT_PRIMARY_WHITE, alpha: 1.0)
             
             self.contentView.addSubview(uImgBackground)
-            self.contentView.addSubview(uImgLogo)
+            self.contentView.addSubview(uImg)
             self.contentView.addSubview(uLabelName)
             self.contentView.addSubview(uLabelDescription)
             
@@ -41,7 +41,7 @@ class SentenceTypeCollectionViewCell: UICollectionViewCell {
                 make.edges.equalTo(self.contentView).inset(UIEdgeInsetsMake(0, 0, 0, 0))
             }
             
-            uImgLogo.snp.makeConstraints { (make) -> Void in
+            uImg.snp.makeConstraints { (make) -> Void in
                 make.width.equalTo(25)
                 make.height.equalTo(25)
                 make.top.equalTo(self.contentView).offset(20)
@@ -49,7 +49,7 @@ class SentenceTypeCollectionViewCell: UICollectionViewCell {
             }
             
             uLabelName.snp.makeConstraints { (make) -> Void in
-                make.top.equalTo(uImgLogo.snp.bottom).offset(10)
+                make.top.equalTo(uImg.snp.bottom).offset(10)
                 make.leading.equalTo(self.contentView).offset(30)
                 make.trailing.equalTo(self.contentView).offset(-30)
             }

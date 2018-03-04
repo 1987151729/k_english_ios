@@ -15,16 +15,16 @@ class BlogViewController: UIViewController {
 
     // 属性定义
     // 非视图属性
-    var presenter: BlogViewPresenter?
-    var dataList: [Blog]!
-    var pageIndex: Int = 1 // 页码
-    let pageSize: Int = 20 // 每页大小
+    private var presenter: BlogViewPresenter?
+    private var dataList: [Blog]!
+    private var pageIndex: Int = 1 // 页码
+    private let pageSize: Int = 20 // 每页大小
     let forCellReuseIdentifier: String = "Cell"
     // 视图属性（对于视图类的属性，在变量名前面加上一个字符“u”作为区分，便于识别。这是本人个人的习惯。）
-    var uBtnNavRight: UIButton!
-    var uTableView: UITableView?
-    var uHeaderView: MJRefreshNormalHeader? // 顶部刷新
-    var uFooterView: MJRefreshAutoNormalFooter? // 底部加载
+    private var uBtnNavRight: UIButton!
+    private var uTableView: UITableView?
+    private var uHeaderView: MJRefreshNormalHeader? // 顶部刷新
+    private var uFooterView: MJRefreshAutoNormalFooter? // 底部加载
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,7 +92,6 @@ extension BlogViewController {
         else {
             height = self.view.frame.height - 30
         }
-        
         // 创建表视图
         self.uTableView = UITableView(frame: CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.view.frame.width, height: height!), style:.plain)
         self.uTableView!.delegate = self
@@ -221,18 +220,17 @@ extension BlogViewController: BlogViewProtocol {
         return self.pageSize
     }
     
-    func refresh(blogList: [Blog]) {
-        dataList.removeAll()
-        dataList = dataList + blogList
+    func refresh(list: [Blog]) {
+        self.dataList = list
         // 重新加载表格数据
         self.uTableView!.reloadData()
         // 结束刷新
         self.uTableView!.mj_header.endRefreshing()
     }
     
-    func load(blogList: [Blog]) {
-        if 0 < blogList.count {
-            dataList = dataList + blogList
+    func load(list: [Blog]) {
+        if 0 < list.count {
+            self.dataList = self.dataList + list
             // 重新加载表格数据
             self.uTableView!.reloadData()
         }

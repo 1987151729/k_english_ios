@@ -10,7 +10,7 @@ import UIKit
 
 class SentenceTypeService: NSObject {
     
-    static var MODULE: String = "sentence_type" // 模块
+    static let MODULE: String = "sentence_type" // 模块
     
     static func list(pageIndex: Int, pageSize: Int, callback: @escaping(Any) -> Void) -> Void{
         // 请求

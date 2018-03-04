@@ -10,7 +10,7 @@ import UIKit
 
 class TranslateService: NSObject {
 
-    static var MODULE: String = "translate" // 模块
+    static let MODULE: String = "translate" // 模块
     
     static func query(userID: String, query: String, type: Int, callback: @escaping(Any) -> Void) -> Void{
         // 请求

@@ -18,9 +18,9 @@ protocol WordTypeViewProtocol: NSObjectProtocol {
     
     /* 操作的结果，对应的反馈 */
     // 下拉刷新
-    func refresh(wordTypeList: [WordType])
+    func refresh(list: [WordType])
     // 上拉加载
-    func load(wordTypeList: [WordType])
+    func load(list: [WordType])
     
     /* 操作过程中对应的友好的交互 */
 }

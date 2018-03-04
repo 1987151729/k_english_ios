@@ -37,7 +37,6 @@ class HxNineGridViewCell: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        initView()
     }
     
     // 页面布局

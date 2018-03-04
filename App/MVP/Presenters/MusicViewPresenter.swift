@@ -1,8 +1,8 @@
 //
-//  WordTypePresenter.swift
+//  MusicPresenter.swift
 //  App
 //
-//  Created by kila on 24/02/2018.
+//  Created by kila on 26/02/2018.
 //  Copyright © 2018 kila. All rights reserved.
 //
 
@@ -10,12 +10,12 @@ import UIKit
 import SwiftyJSON
 import ObjectMapper
 
-class WordTypePresenter: NSObject {
+class MusicViewPresenter: NSObject {
     
-    let viewProtocol: WordTypeViewProtocol?
+    let viewProtocol: MusicViewProtocol?
     
     // 构造函数
-    init(viewProtocol: WordTypeViewProtocol) {
+    init(viewProtocol: MusicViewProtocol) {
         self.viewProtocol = viewProtocol
     }
     
@@ -25,15 +25,15 @@ class WordTypePresenter: NSObject {
     func refresh(){
         let pageIndex = viewProtocol?.getPageIndex()
         let pageSize = viewProtocol?.getPageSize()
-        WordTypeService.list(pageIndex: pageIndex!, pageSize: pageSize!, callback:{(data: Any) -> Void in
+        MusicService.list(pageIndex: pageIndex!, pageSize: pageSize!, callback:{(data: Any) -> Void in
             let json = JSON(data)
             let jsonArray = json.arrayValue
-            var list = [WordType]()
+            var list = [Music]()
             for raw in jsonArray{
-                let item = WordType(JSONString: raw.rawString()!)
+                let item = Music(JSONString: raw.rawString()!)
                 list.append(item!)
             }
-            self.viewProtocol?.refresh(wordTypeList: list)
+            self.viewProtocol?.refresh(list: list)
         })
     }
     
@@ -41,15 +41,15 @@ class WordTypePresenter: NSObject {
     func load(){
         let pageIndex = viewProtocol?.getPageIndex()
         let pageSize = viewProtocol?.getPageSize()
-        WordTypeService.list(pageIndex: pageIndex!, pageSize: pageSize!, callback:{(data: Any) -> Void in
+        MusicService.list(pageIndex: pageIndex!, pageSize: pageSize!, callback:{(data: Any) -> Void in
             let json = JSON(data)
             let jsonArray = json.arrayValue
-            var list = [WordType]()
+            var list = [Music]()
             for raw in jsonArray{
-                let item = WordType(JSONString: raw.rawString()!)
+                let item = Music(JSONString: raw.rawString()!)
                 list.append(item!)
             }
-            self.viewProtocol?.load(wordTypeList: list)
+            self.viewProtocol?.load(list: list)
         })
     }
 }
