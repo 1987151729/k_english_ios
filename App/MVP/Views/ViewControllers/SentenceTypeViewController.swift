@@ -53,12 +53,12 @@ class SentenceTypeViewController: UIViewController {
 // 界面布局
 extension SentenceTypeViewController {
     
-    func initView() {
+    private func initView() {
         self.view.backgroundColor = ColorUtil.rgbColorFromHex(hex: Constants.Colors.COLOR_PRIMARY_WHITE, alpha: 1.0)
         initBody()
     }
     
-    func initBody() {
+    private func initBody() {
         // 调整表格的高度，使其不被tabbar遮挡
         let modelName = UIDevice.current.modelName
         var height: CGFloat?
@@ -98,7 +98,7 @@ extension SentenceTypeViewController {
 // 事件绑定
 extension SentenceTypeViewController {
     
-    func initTarget(){
+    private func initTarget(){
         // 下拉刷新
         uHeaderView?.setRefreshingTarget(self, refreshingAction: #selector(self.headerRefresh))
         // 上拉加载
@@ -109,20 +109,10 @@ extension SentenceTypeViewController {
 // 初始化数据
 extension SentenceTypeViewController {
     
-    func initData(){
+    private func initData(){
         presenter = SentenceTypeViewPresenter.init(viewProtocol: self)
         dataList = [SentenceType]()
         headerRefresh()
-    }
-}
-
-// 事件处理（非数据业务）
-extension SentenceTypeViewController {
-    
-    @objc func goToBlogPublish(){
-        self.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(BlogPublishViewController(), animated: true)
-        self.hidesBottomBarWhenPushed = false
     }
 }
 
@@ -182,7 +172,11 @@ extension SentenceTypeViewController: UICollectionViewDelegate, UICollectionView
     
     // item 对应的点击事件
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("index is \(indexPath.row)")
+        let sentenceType = self.dataList[indexPath.row]
+        let viewController = SentenceViewController()
+        viewController.type = sentenceType.type!
+        viewController.name = sentenceType.name
+        Constants.Instance.findViewController?.pushViewController(viewController: viewController, animated: true)
     }
 }
 
@@ -220,13 +214,13 @@ extension SentenceTypeViewController: SentenceTypeViewProtocol {
 extension SentenceTypeViewController {
     
     // 顶部下拉刷新
-    @objc func headerRefresh(){
+    @objc private func headerRefresh(){
         self.pageIndex = 1
         presenter?.refresh()
     }
     
     // 底部上拉加载
-    @objc func footerLoad(){
+    @objc private func footerLoad(){
         self.pageIndex += 1
         presenter?.load()
     }

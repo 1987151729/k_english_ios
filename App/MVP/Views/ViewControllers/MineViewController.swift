@@ -38,12 +38,12 @@ class MineViewController: UIViewController {
 // 界面布局
 extension MineViewController{
     
-    func initView() {
+    private func initView() {
         self.view.backgroundColor = ColorUtil.rgbColorFromHex(hex: Constants.Colors.COLOR_PRIMARY_WHITE, alpha: 1.0)
         initNavigation()
     }
     
-    func initNavigation() {
+    private func initNavigation() {
         // 标题
         self.navigationItem.title = NSLocalizedString("main_tab_mine", comment: "")
         // 右按钮
@@ -58,7 +58,7 @@ extension MineViewController{
 // 事件处理
 extension MineViewController{
     
-    @objc func goToxxxxx(){
+    @objc private func goToxxxxx(){
 //        self.hidesBottomBarWhenPushed = true
 //        self.navigationController?.pushViewController(BlogPublishViewController(), animated: true)
 //        self.hidesBottomBarWhenPushed = false

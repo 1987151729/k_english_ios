@@ -43,7 +43,7 @@ class HxExpandTextView: UIView {
     }
     
     // 页面布局
-    func initView() {
+    private func initView() {
         uViewItemBox = UIView()
         contentLabel = UILabel()
         btnExpand = UIButton()

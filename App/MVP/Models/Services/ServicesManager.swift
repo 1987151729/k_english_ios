@@ -30,7 +30,7 @@ class ServicesManager: NSObject {
                 return .success
             }
             .responseJSON { response in
-                //                debugPrint(response)
+//                                debugPrint(response)
                 callback(response.value!)
         }
     }

@@ -56,12 +56,12 @@ class MusicViewController: UIViewController {
 // 界面布局
 extension MusicViewController {
     
-    func initView() {
+    private func initView() {
         self.view.backgroundColor = ColorUtil.rgbColorFromHex(hex: Constants.Colors.COLOR_PRIMARY_WHITE, alpha: 1.0)
         initBody()
     }
     
-    func initBody() {
+    private func initBody() {
         // 调整表格的高度，使其不被tabbar遮挡
         let modelName = UIDevice.current.modelName
         var height: CGFloat?
@@ -95,26 +95,13 @@ extension MusicViewController {
         //        uTableHeader?.stateLabel.isHidden = true
         // 刷新时不显示文字（其它情况下还是有提示文字的）
         //        uTableFooter?.isRefreshingTitleHidden = true
-        
-//        self.uTableView?.rowHeight = UITableViewAutomaticDimension
-        
-//        self.uTableView?.snp.makeConstraints { (make) -> Void in
-//            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
-//            make.left.equalTo(view)
-//            make.right.equalTo(view)
-//            make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(0)
-//        }
-//        print(self.additionalSafeAreaInsets)
-//
-//        print(view.frame)
-//        print(view.safeAreaLayoutGuide)
     }
 }
 
 // 事件绑定
 extension MusicViewController {
     
-    func initTarget(){
+    private func initTarget(){
         // 下拉刷新
         uHeaderView?.setRefreshingTarget(self, refreshingAction: #selector(self.headerRefresh))
         // 上拉加载
@@ -125,7 +112,7 @@ extension MusicViewController {
 // 初始化数据
 extension MusicViewController {
     
-    func initData(){
+    private func initData(){
         presenter = MusicViewPresenter.init(viewProtocol: self)
         dataList = [Music]()
         expandStateList = [Bool]()
@@ -199,6 +186,11 @@ extension MusicViewController: MusicViewProtocol {
         self.uTableView!.reloadData()
         // 结束刷新
         self.uTableView!.mj_header.endRefreshing()
+        // 判断是否加载完成
+        self.uTableView!.mj_footer.resetNoMoreData()
+        if self.pageSize > list.count {
+            self.uTableView!.mj_footer.endRefreshingWithNoMoreData()
+        }
     }
     
     func load(list: [Music]) {
@@ -210,6 +202,10 @@ extension MusicViewController: MusicViewProtocol {
         }
         // 结束刷新
         self.uTableView!.mj_footer.endRefreshing()
+        // 判断是否加载完成
+        if self.pageSize > list.count {
+            self.uTableView!.mj_footer.endRefreshingWithNoMoreData()
+        }
     }
 }
 
@@ -217,13 +213,13 @@ extension MusicViewController: MusicViewProtocol {
 extension MusicViewController {
     
     // 顶部下拉刷新
-    @objc func headerRefresh(){
+    @objc private func headerRefresh(){
         self.pageIndex = 1
         presenter?.refresh()
     }
     
     // 底部上拉加载
-    @objc func footerLoad(){
+    @objc private func footerLoad(){
         self.pageIndex += 1
         presenter?.load()
     }

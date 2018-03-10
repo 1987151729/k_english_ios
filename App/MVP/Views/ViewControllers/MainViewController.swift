@@ -38,11 +38,11 @@ class MainViewController: ESTabBarController {
 // 界面布局
 extension MainViewController{
     
-    func initView() {
+    private func initView() {
         initTabBar()
     }
     
-    func initTabBar() {
+    private func initTabBar() {
         let tabBarController = self // ESTabBarController()
         tabBarController.delegate = nil
         
@@ -84,6 +84,8 @@ extension MainViewController{
         let v3 = UIViewController()
         let v4 = NewsViewController()
         let v5 = MineViewController()
+        
+        Constants.Instance.findViewController = v2
 
         v1.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: nil, image: UIImage(named: "tab_main_home"), selectedImage: UIImage(named: "tab_main_home_focused"))
         v2.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: nil, image: UIImage(named: "tab_main_find"), selectedImage: UIImage(named: "tab_main_find_focused"))
@@ -109,4 +111,14 @@ extension MainViewController{
     }
 }
 
+// 事件处理（非数据业务）
+extension MainViewController {
+    
+    // 跳转页面
+    func pushViewController(viewController: UIViewController, animated: Bool){
+        self.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(viewController, animated: animated)
+        self.hidesBottomBarWhenPushed = false
+    }
+}
 

@@ -1,34 +1,38 @@
 //
-//  HomeViewController.swift
+//  WordViewController.swift
 //  App
 //
-//  Created by kila on 06/02/2018.
+//  Created by kila on 05/03/2018.
 //  Copyright © 2018 kila. All rights reserved.
 //
 
 import UIKit
+import AVKit
 import MJRefresh
-import Kingfisher
-import SKPhotoBrowser
 
-class BlogViewController: UIViewController {
-
+class WordViewController: UIViewController {
+    
     // 属性定义
     // 非视图属性
-    private var presenter: BlogViewPresenter?
-    private var dataList: [Blog]!
+    private var presenter: WordViewPresenter?
+    private var dataList: [Word]!
     private var pageIndex: Int = 1 // 页码
     private let pageSize: Int = 20 // 每页大小
-    let forCellReuseIdentifier: String = "Cell"
+    var name: String? //
+    var type: Int = 0 // 类型
+    private let forCellReuseIdentifier: String = "Cell"
+    private var expandStateList: [Bool]! // 定义数组存储文本的折叠状态
     // 视图属性（对于视图类的属性，在变量名前面加上一个字符“u”作为区分，便于识别。这是本人个人的习惯。）
-    private var uBtnNavRight: UIButton!
+    private var uBtnNavLeft: UIButton!
     private var uTableView: UITableView?
     private var uHeaderView: MJRefreshNormalHeader? // 顶部刷新
     private var uFooterView: MJRefreshAutoNormalFooter? // 底部加载
-    
+    private var uAVPlayer: AVPlayer!
+    private var uAVPlayerLayer: AVPlayerLayer!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
         initView()
         initTarget()
@@ -40,21 +44,21 @@ class BlogViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
+
     /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
 
 // 界面布局
-extension BlogViewController {
+extension WordViewController {
     
     private func initView() {
         self.view.backgroundColor = ColorUtil.rgbColorFromHex(hex: Constants.Colors.COLOR_PRIMARY_WHITE, alpha: 1.0)
@@ -64,22 +68,12 @@ extension BlogViewController {
     
     private func initNavigation() {
         // 标题
-        self.navigationItem.title = NSLocalizedString("main_tab_home", comment: "")
-        // 右按钮
-        uBtnNavRight = UIButton(frame:CGRect(x:0, y:0, width:18, height:18))
-        uBtnNavRight.setImage(UIImage(named: "icon_blog_to"), for: .normal)
-        let barButtonRight = UIBarButtonItem(customView: uBtnNavRight)
-        
-        //        // 按钮间的空隙
-        //        let gap = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
-        //        gap.width = 15;
-        
-        // 用于消除右边边空隙，要不然按钮顶不到最边上
-        //        let spacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
-        //        spacer.width = -10;
-        
-        // 设置按钮（注意顺序，从右往左排的）
-        self.navigationItem.rightBarButtonItems = [barButtonRight]
+        self.navigationItem.title = self.name! + NSLocalizedString("find_tab_a", comment: "")
+        // 左按钮
+        uBtnNavLeft = UIButton(frame:CGRect(x:0, y:0, width:18, height:18))
+        uBtnNavLeft.setImage(UIImage(named: "icon_head_back"), for: .normal)
+        let barButtonLeft = UIBarButtonItem(customView: uBtnNavLeft)
+        self.navigationItem.leftBarButtonItem = barButtonLeft
     }
     
     private func initBody() {
@@ -87,18 +81,19 @@ extension BlogViewController {
         let modelName = UIDevice.current.modelName
         var height: CGFloat?
         if "iPhone X" == modelName {
-            height = self.view.frame.height - 50
+            height = self.view.frame.height - 150
         }
         else {
-            height = self.view.frame.height - 30
+            height = self.view.frame.height - 130
         }
         // 创建表视图
         self.uTableView = UITableView(frame: CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.view.frame.width, height: height!), style:.plain)
+        //        self.uTableView = UITableView()
         self.uTableView!.delegate = self
         self.uTableView!.dataSource = self
         self.uTableView!.separatorStyle = .none
         // 创建一个重用的单元格（用的是哪个类就注册哪个类）
-        self.uTableView!.register(BlogTableViewCell.self, forCellReuseIdentifier: forCellReuseIdentifier)
+        self.uTableView!.register(WordTableViewCell.self, forCellReuseIdentifier: forCellReuseIdentifier)
         self.view.addSubview(self.uTableView!)
         // 下拉刷新相关设置
         uHeaderView = MJRefreshNormalHeader()
@@ -112,18 +107,22 @@ extension BlogViewController {
         // 隐藏时间
         uHeaderView?.lastUpdatedTimeLabel.isHidden = true
         // 隐藏状态
-//        uTableHeader?.stateLabel.isHidden = true
+        //        uTableHeader?.stateLabel.isHidden = true
         // 刷新时不显示文字（其它情况下还是有提示文字的）
-//        uTableFooter?.isRefreshingTitleHidden = true
+        //        uTableFooter?.isRefreshingTitleHidden = true
+        
+        // 音频播放
+        uAVPlayerLayer = AVPlayerLayer()
+        self.view.layer.addSublayer(uAVPlayerLayer)
     }
 }
 
 // 事件绑定
-extension BlogViewController {
+extension WordViewController {
     
     private func initTarget(){
-        // 导航栏
-        uBtnNavRight.addTarget(self, action:#selector(self.goToBlogPublish), for:.touchUpInside)
+        // 返回
+        uBtnNavLeft.addTarget(self,action:#selector(self.back),for:.touchUpInside)
         // 下拉刷新
         uHeaderView?.setRefreshingTarget(self, refreshingAction: #selector(self.headerRefresh))
         // 上拉加载
@@ -132,27 +131,35 @@ extension BlogViewController {
 }
 
 // 初始化数据
-extension BlogViewController {
+extension WordViewController {
     
     private func initData(){
-        presenter = BlogViewPresenter.init(viewProtocol: self)
-        dataList = [Blog]()
+        presenter = WordViewPresenter.init(viewProtocol: self)
+        dataList = [Word]()
+        expandStateList = [Bool]()
         headerRefresh()
     }
 }
 
 // 事件处理（非数据业务）
-extension BlogViewController {
+extension WordViewController{
     
-    @objc private func goToBlogPublish(){
-        self.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(BlogPublishViewController(), animated: true)
-        self.hidesBottomBarWhenPushed = false
+    // 返回
+    @objc private func back(){
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    // 播放
+    private func play(word: Word){
+        let videoURL =  URL(string: word.speakUrl!)!
+        uAVPlayer = AVPlayer(url: videoURL)
+        uAVPlayerLayer.player = uAVPlayer
+        uAVPlayer.play()
     }
 }
 
 // 事件处理（非数据业务）[实现协议 ]
-extension BlogViewController: UITableViewDelegate, UITableViewDataSource {
+extension WordViewController: UITableViewDelegate, UITableViewDataSource {
     
     // 分区
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -167,50 +174,33 @@ extension BlogViewController: UITableViewDelegate, UITableViewDataSource {
     // 创建各单元显示内容(创建参数indexPath指定的单元）
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
         -> UITableViewCell {
-            let blog = self.dataList[indexPath.row]
+            let word = self.dataList[indexPath.row]
             // 为了提供表格显示性能，已创建完成的单元需重复使用
             // 同一形式的单元格重复使用，在声明时已注册
-            var uCell: BlogTableViewCell = tableView.dequeueReusableCell(withIdentifier: forCellReuseIdentifier, for: indexPath) as! BlogTableViewCell
-
+            var uCell: WordTableViewCell = tableView.dequeueReusableCell(withIdentifier: forCellReuseIdentifier, for: indexPath) as! WordTableViewCell
+            
             if uCell.isEqual(nil) {
-                uCell = BlogTableViewCell(style: .default, reuseIdentifier: forCellReuseIdentifier)
+                uCell = WordTableViewCell(style: .default, reuseIdentifier: forCellReuseIdentifier)
             }
             //            cell.accessoryType = .disclosureIndicator
             uCell.selectionStyle = .none
             
-            uCell.uImgAvatar.kf.setImage(with: URL(string: (blog.user?.avatar)!))
-            uCell.uLabelName.text = blog.user?.name
-            uCell.uLabelTime.text = DateUtil.timeBetween(date: blog.createdAt!)
-            uCell.uLabelContent.text = blog.content!
-            uCell.uViewImgs.delegate = self
-            uCell.uViewImgs.imageSrcs = blog.imgArr!
-            uCell.uLabelCheckNum.text = String(describing: blog.checkNum!)
-            uCell.uLabelCommentNum.text = String(describing: blog.commentNum!)
-            uCell.uLabelLikeNum.text = String(describing: blog.likeNum!)
+            uCell.uLabelQuery.text = word.query
+            uCell.uLabelTranslation.text = word.translation
+            uCell.uLabelPhonetic.text = "[" + word.phonetic! + "]"
             
             return uCell
     }
-}
-
-// 事件处理（非数据业务）[实现协议 ]
-extension BlogViewController: HxNineGridViewDelegate {
-    func onClickImageView(imageSrcs: [String], index: Int) {
-        // 1. create URL Array
-        var images = [SKPhoto]()
-        for imageSrc in imageSrcs {
-            let photo = SKPhoto.photoWithImageURL(imageSrc)
-            photo.shouldCachePhotoURLImage = false // you can use image cache by true(NSCache)
-            images.append(photo)
-        }
-        // 2. create PhotoBrowser Instance, and present.
-        let browser = SKPhotoBrowser(photos: images)
-        browser.initializePageIndex(index)
-        present(browser, animated: true, completion: {})
+    
+    // item 对应的点击事件
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        let word = self.dataList[indexPath.row]
+        self.play(word: word)
     }
 }
 
 // 事件处理（数据业务）[实现协议 ]
-extension BlogViewController: BlogViewProtocol {
+extension WordViewController: WordViewProtocol {
     
     func getPageIndex() -> Int {
         return self.pageIndex
@@ -220,8 +210,13 @@ extension BlogViewController: BlogViewProtocol {
         return self.pageSize
     }
     
-    func refresh(list: [Blog]) {
+    func getType() -> Int {
+        return self.type
+    }
+    
+    func refresh(list: [Word]) {
         self.dataList = list
+        self.expandStateList = [Bool](repeatElement(false, count: list.count))
         // 重新加载表格数据
         self.uTableView!.reloadData()
         // 结束刷新
@@ -233,9 +228,10 @@ extension BlogViewController: BlogViewProtocol {
         }
     }
     
-    func load(list: [Blog]) {
+    func load(list: [Word]) {
         if 0 < list.count {
             self.dataList = self.dataList + list
+            self.expandStateList = self.expandStateList + [Bool](repeatElement(false, count: list.count))
             // 重新加载表格数据
             self.uTableView!.reloadData()
         }
@@ -249,7 +245,7 @@ extension BlogViewController: BlogViewProtocol {
 }
 
 // 事件处理（数据业务）[功能逻辑]
-extension BlogViewController {
+extension WordViewController {
     
     // 顶部下拉刷新
     @objc private func headerRefresh(){

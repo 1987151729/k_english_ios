@@ -27,29 +27,30 @@ class MusicTableViewCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        if !self.isEqual(nil) {
-            uViewItemBox = UIView()
-            uImgBackground = UIImageView(image: UIImage(named:"icon_rectangle_bg4"))
-            uImg = UIImageView()
-            uLabelTitle = UILabel()
-            uViewDescription = HxExpandTextView()
-            
-            uLabelTitle.font = UIFont.systemFont(ofSize: 16)
-            uLabelTitle.numberOfLines = 2
-            uViewDescription.contentLabel.font = UIFont.systemFont(ofSize: 14)
-            
-            uLabelTitle.textColor = ColorUtil.rgbColorFromHex(hex: Constants.Colors.COLOR_TXT_PRIMARY_MEDIUM, alpha: 1.0)
-            uViewDescription.contentLabel.textColor = ColorUtil.rgbColorFromHex(hex: Constants.Colors.COLOR_TXT_PRIMARY_MEDIUM, alpha: 1.0)
-            uViewDescription.delegate = self
-            
-            self.contentView.addSubview(uViewItemBox)
-            uViewItemBox.addSubview(uImgBackground)
-            uViewItemBox.addSubview(uImg)
-            uViewItemBox.addSubview(uLabelTitle)
-            uViewItemBox.addSubview(uViewDescription)
-            
-            self.updateConstraints()
-        }
+        self.initView()
+        self.updateConstraints()
+    }
+    
+    private func initView(){
+        uViewItemBox = UIView()
+        uImgBackground = UIImageView(image: UIImage(named:"icon_rectangle_bg4"))
+        uImg = UIImageView()
+        uLabelTitle = UILabel()
+        uViewDescription = HxExpandTextView()
+        
+        uLabelTitle.font = UIFont.systemFont(ofSize: 16)
+        uLabelTitle.numberOfLines = 1
+        uViewDescription.contentLabel.font = UIFont.systemFont(ofSize: 14)
+        
+        uLabelTitle.textColor = ColorUtil.rgbColorFromHex(hex: Constants.Colors.COLOR_TXT_PRIMARY_MEDIUM, alpha: 1.0)
+        uViewDescription.contentLabel.textColor = ColorUtil.rgbColorFromHex(hex: Constants.Colors.COLOR_TXT_PRIMARY_MEDIUM, alpha: 1.0)
+        uViewDescription.delegate = self
+        
+        self.contentView.addSubview(uViewItemBox)
+        uViewItemBox.addSubview(uImgBackground)
+        uViewItemBox.addSubview(uImg)
+        uViewItemBox.addSubview(uLabelTitle)
+        uViewItemBox.addSubview(uViewDescription)
     }
     
     override func updateConstraints() {
@@ -76,7 +77,7 @@ class MusicTableViewCell: UITableViewCell {
         }
         
         uViewDescription.snp.updateConstraints { (make) -> Void in
-            make.top.equalTo(uLabelTitle.snp.bottom).offset(12)
+            make.top.equalTo(uViewItemBox).offset(42)
             make.leading.equalTo(uLabelTitle)
             make.trailing.equalTo(uViewItemBox).offset(-20)
             make.bottom.lessThanOrEqualTo(uViewItemBox).offset(-20)

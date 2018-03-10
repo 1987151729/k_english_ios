@@ -11,9 +11,21 @@
 		1223EFEB05EAFD5330A37CA3 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C37079CD8719E3BD1382C89 /* Pods_App.framework */; };
 		27090B6D203AB58C00C9C9D5 /* HxNineGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27090B6C203AB58C00C9C9D5 /* HxNineGridView.swift */; };
 		27090B6F203AB88100C9C9D5 /* HxNineGridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27090B6E203AB88100C9C9D5 /* HxNineGridViewCell.swift */; };
+		271180A3204D646300770E56 /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271180A2204D646300770E56 /* WordViewController.swift */; };
+		271180A5204D647900770E56 /* SentenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271180A4204D647900770E56 /* SentenceViewController.swift */; };
 		271A3C08203FA17000DC9B16 /* WordTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A3C07203FA17000DC9B16 /* WordTypeViewController.swift */; };
 		271A3C0A203FA18100DC9B16 /* SentenceTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A3C09203FA18100DC9B16 /* SentenceTypeViewController.swift */; };
 		271A3C0C203FA19400DC9B16 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A3C0B203FA19400DC9B16 /* MusicViewController.swift */; };
+		271DE3A0204BF115004E2345 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271DE39F204BF115004E2345 /* Word.swift */; };
+		271DE3A2204BF147004E2345 /* Sentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271DE3A1204BF147004E2345 /* Sentence.swift */; };
+		271DE3A4204BF177004E2345 /* WordViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271DE3A3204BF177004E2345 /* WordViewPresenter.swift */; };
+		271DE3A6204BF18D004E2345 /* WordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271DE3A5204BF18D004E2345 /* WordService.swift */; };
+		271DE3A8204BF1A2004E2345 /* SentenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271DE3A7204BF1A2004E2345 /* SentenceService.swift */; };
+		271DE3AA204BF1B2004E2345 /* SentenceViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271DE3A9204BF1B2004E2345 /* SentenceViewPresenter.swift */; };
+		271DE3AC204BF1D2004E2345 /* WordViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271DE3AB204BF1D2004E2345 /* WordViewProtocol.swift */; };
+		271DE3AE204BF1E4004E2345 /* SentenceViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271DE3AD204BF1E4004E2345 /* SentenceViewProtocol.swift */; };
+		271DE3B0204BF1FE004E2345 /* WordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271DE3AF204BF1FE004E2345 /* WordTableViewCell.swift */; };
+		271DE3B2204BF215004E2345 /* SentenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271DE3B1204BF215004E2345 /* SentenceTableViewCell.swift */; };
 		272A3EE3201D5F2E00EF3958 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272A3EE2201D5F2E00EF3958 /* AppDelegate.swift */; };
 		272A3EEA201D5F2E00EF3958 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 272A3EE9201D5F2E00EF3958 /* Assets.xcassets */; };
 		272A3EED201D5F2E00EF3958 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272A3EEB201D5F2E00EF3958 /* LaunchScreen.storyboard */; };
@@ -95,9 +107,21 @@
 		0CD7DA322DA6463577EBE0C2 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
 		27090B6C203AB58C00C9C9D5 /* HxNineGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HxNineGridView.swift; sourceTree = "<group>"; };
 		27090B6E203AB88100C9C9D5 /* HxNineGridViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HxNineGridViewCell.swift; sourceTree = "<group>"; };
+		271180A2204D646300770E56 /* WordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
+		271180A4204D647900770E56 /* SentenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceViewController.swift; sourceTree = "<group>"; };
 		271A3C07203FA17000DC9B16 /* WordTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTypeViewController.swift; sourceTree = "<group>"; };
 		271A3C09203FA18100DC9B16 /* SentenceTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceTypeViewController.swift; sourceTree = "<group>"; };
 		271A3C0B203FA19400DC9B16 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		271DE39F204BF115004E2345 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		271DE3A1204BF147004E2345 /* Sentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentence.swift; sourceTree = "<group>"; };
+		271DE3A3204BF177004E2345 /* WordViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewPresenter.swift; sourceTree = "<group>"; };
+		271DE3A5204BF18D004E2345 /* WordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordService.swift; sourceTree = "<group>"; };
+		271DE3A7204BF1A2004E2345 /* SentenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceService.swift; sourceTree = "<group>"; };
+		271DE3A9204BF1B2004E2345 /* SentenceViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceViewPresenter.swift; sourceTree = "<group>"; };
+		271DE3AB204BF1D2004E2345 /* WordViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewProtocol.swift; sourceTree = "<group>"; };
+		271DE3AD204BF1E4004E2345 /* SentenceViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceViewProtocol.swift; sourceTree = "<group>"; };
+		271DE3AF204BF1FE004E2345 /* WordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTableViewCell.swift; sourceTree = "<group>"; };
+		271DE3B1204BF215004E2345 /* SentenceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentenceTableViewCell.swift; sourceTree = "<group>"; };
 		272A3EDF201D5F2E00EF3958 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		272A3EE2201D5F2E00EF3958 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		272A3EE9201D5F2E00EF3958 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -327,10 +351,12 @@
 			isa = PBXGroup;
 			children = (
 				278E92B32036780F005F4F72 /* BlogViewPresenter.swift */,
+				27EE42AE2043EDF700390361 /* MusicViewPresenter.swift */,
+				27EE42682043B73000390361 /* SentenceTypeViewPresenter.swift */,
+				271DE3A9204BF1B2004E2345 /* SentenceViewPresenter.swift */,
 				27A2A4C9202E8FA1004F8F94 /* TranslateViewPresenter.swift */,
 				272EA2F420415F270048E24A /* WordTypeViewPresenter.swift */,
-				27EE42682043B73000390361 /* SentenceTypeViewPresenter.swift */,
-				27EE42AE2043EDF700390361 /* MusicViewPresenter.swift */,
+				271DE3A3204BF177004E2345 /* WordViewPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -339,11 +365,13 @@
 			isa = PBXGroup;
 			children = (
 				276C141D20346E0F004D524D /* Blog.swift */,
+				27EE42AA2043EDA600390361 /* Music.swift */,
+				271DE3A1204BF147004E2345 /* Sentence.swift */,
+				27EE426E2043B77600390361 /* SentenceType.swift */,
 				27A2A4CD202EEDD1004F8F94 /* Translate.swift */,
 				276C141F20347037004D524D /* User.swift */,
+				271DE39F204BF115004E2345 /* Word.swift */,
 				272EA2F020415BCD0048E24A /* WordType.swift */,
-				27EE426E2043B77600390361 /* SentenceType.swift */,
-				27EE42AA2043EDA600390361 /* Music.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -352,11 +380,13 @@
 			isa = PBXGroup;
 			children = (
 				272A8BAE20350E1100BC3E33 /* BlogService.swift */,
+				27EE42B22043EE2600390361 /* MusicService.swift */,
+				271DE3A7204BF1A2004E2345 /* SentenceService.swift */,
+				27EE426C2043B76200390361 /* SentenceTypeService.swift */,
 				2780B359201DB81700609001 /* ServicesManager.swift */,
 				27A2A4CB202EE0B6004F8F94 /* TranslateService.swift */,
+				271DE3A5204BF18D004E2345 /* WordService.swift */,
 				272EA2F8204160730048E24A /* WordTypeService.swift */,
-				27EE426C2043B76200390361 /* SentenceTypeService.swift */,
-				27EE42B22043EE2600390361 /* MusicService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -366,10 +396,12 @@
 			children = (
 				278E92B52036782F005F4F72 /* BlogViewProtocol.swift */,
 				278A14382026D0EE00047482 /* LoginViewProtocol.swift */,
+				27EE42AC2043EDE400390361 /* MusicViewProtocol.swift */,
+				27EE42662043B70700390361 /* SentenceTypeViewProtocol.swift */,
+				271DE3AD204BF1E4004E2345 /* SentenceViewProtocol.swift */,
 				27A2A4C7202E8D2D004F8F94 /* TranslateViewProtocol.swift */,
 				272EA2F620415F5D0048E24A /* WordTypeViewProtocol.swift */,
-				27EE42662043B70700390361 /* SentenceTypeViewProtocol.swift */,
-				27EE42AC2043EDE400390361 /* MusicViewProtocol.swift */,
+				271DE3AB204BF1D2004E2345 /* WordViewProtocol.swift */,
 			);
 			path = ViewProtocols;
 			sourceTree = "<group>";
@@ -388,8 +420,10 @@
 				271A3C0B203FA19400DC9B16 /* MusicViewController.swift */,
 				27DCB99720293D7600D7AF76 /* NewsViewController.swift */,
 				271A3C09203FA18100DC9B16 /* SentenceTypeViewController.swift */,
+				271180A4204D647900770E56 /* SentenceViewController.swift */,
 				2730E324202C527100E71B0B /* TranslateViewController.swift */,
 				271A3C07203FA17000DC9B16 /* WordTypeViewController.swift */,
+				271180A2204D646300770E56 /* WordViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -423,6 +457,8 @@
 			children = (
 				278E92B72036CEA2005F4F72 /* BlogTableViewCell.swift */,
 				27EE42B02043EE0C00390361 /* MusicTableViewCell.swift */,
+				271DE3B1204BF215004E2345 /* SentenceTableViewCell.swift */,
+				271DE3AF204BF1FE004E2345 /* WordTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -785,33 +821,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271DE3A2204BF147004E2345 /* Sentence.swift in Sources */,
 				27A5EE7120305B4500B3BBEC /* Constants.swift in Sources */,
+				271DE3A8204BF1A2004E2345 /* SentenceService.swift in Sources */,
 				278A144C2026FB0500047482 /* ExampleTipsContentView.swift in Sources */,
 				2730E325202C527100E71B0B /* TranslateViewController.swift in Sources */,
 				27A2A4CA202E8FA1004F8F94 /* TranslateViewPresenter.swift in Sources */,
 				27090B6D203AB58C00C9C9D5 /* HxNineGridView.swift in Sources */,
 				271A3C0A203FA18100DC9B16 /* SentenceTypeViewController.swift in Sources */,
+				271DE3AA204BF1B2004E2345 /* SentenceViewPresenter.swift in Sources */,
 				278E92B62036782F005F4F72 /* BlogViewProtocol.swift in Sources */,
 				2748EFF720382ACF008E9899 /* DateUtil.swift in Sources */,
 				278A14392026D0EE00047482 /* LoginViewProtocol.swift in Sources */,
 				272A8BAF20350E1100BC3E33 /* BlogService.swift in Sources */,
 				276C142020347037004D524D /* User.swift in Sources */,
+				271DE3B2204BF215004E2345 /* SentenceTableViewCell.swift in Sources */,
 				27EE426D2043B76200390361 /* SentenceTypeService.swift in Sources */,
 				27EE42AD2043EDE400390361 /* MusicViewProtocol.swift in Sources */,
 				27EE42692043B73000390361 /* SentenceTypeViewPresenter.swift in Sources */,
 				2780B35C201DBA3F00609001 /* LoginViewController.swift in Sources */,
 				27DCB99820293D7600D7AF76 /* NewsViewController.swift in Sources */,
 				272EA2F120415BCD0048E24A /* WordType.swift in Sources */,
+				271180A3204D646300770E56 /* WordViewController.swift in Sources */,
 				27EE42B12043EE0C00390361 /* MusicTableViewCell.swift in Sources */,
 				278A144D2026FB0500047482 /* ExampleIrregularityContentView.swift in Sources */,
 				27A2A4CC202EE0B6004F8F94 /* TranslateService.swift in Sources */,
+				271DE3AE204BF1E4004E2345 /* SentenceViewProtocol.swift in Sources */,
 				27A2A4CE202EEDD1004F8F94 /* Translate.swift in Sources */,
 				27A2A4C8202E8D2D004F8F94 /* TranslateViewProtocol.swift in Sources */,
 				2730E321202BDA5A00E71B0B /* MainNavigationController2.swift in Sources */,
 				27EE42B52043FAB700390361 /* HxExpandTextView.swift in Sources */,
 				278A14482026FB0500047482 /* ExampleBouncesContentView.swift in Sources */,
+				271DE3B0204BF1FE004E2345 /* WordTableViewCell.swift in Sources */,
+				271DE3AC204BF1D2004E2345 /* WordViewProtocol.swift in Sources */,
 				272EA2F520415F270048E24A /* WordTypeViewPresenter.swift in Sources */,
 				272EA2F9204160730048E24A /* WordTypeService.swift in Sources */,
+				271180A5204D647900770E56 /* SentenceViewController.swift in Sources */,
 				272EA2FC20419B030048E24A /* WordTypeCollectionViewCell.swift in Sources */,
 				27DCB99620293D5E00D7AF76 /* FindViewController.swift in Sources */,
 				27EE42AB2043EDA600390361 /* Music.swift in Sources */,
@@ -832,9 +877,12 @@
 				2730E323202C3D4D00E71B0B /* BlogPublishViewController.swift in Sources */,
 				27DCB99420293D2200D7AF76 /* BlogViewController.swift in Sources */,
 				271A3C08203FA17000DC9B16 /* WordTypeViewController.swift in Sources */,
+				271DE3A0204BF115004E2345 /* Word.swift in Sources */,
 				27D4FF71203E59DB009AEB39 /* UIDevice+extension.swift in Sources */,
 				27EE426F2043B77600390361 /* SentenceType.swift in Sources */,
 				2780B35E201DBA9400609001 /* MainViewController.swift in Sources */,
+				271DE3A4204BF177004E2345 /* WordViewPresenter.swift in Sources */,
+				271DE3A6204BF18D004E2345 /* WordService.swift in Sources */,
 				271A3C0C203FA19400DC9B16 /* MusicViewController.swift in Sources */,
 				278E92B82036CEA3005F4F72 /* BlogTableViewCell.swift in Sources */,
 				27090B6F203AB88100C9C9D5 /* HxNineGridViewCell.swift in Sources */,

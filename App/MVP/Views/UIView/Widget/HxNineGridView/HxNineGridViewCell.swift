@@ -40,7 +40,7 @@ class HxNineGridViewCell: UIView {
     }
     
     // 页面布局
-    func initView() {
+    private func initView() {
         self.addSubview(imageView)
         imageView.snp.makeConstraints { (make) in
             make.edges.equalTo(self).inset(UIEdgeInsetsMake(0, 0, 0, 0))

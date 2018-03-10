@@ -46,18 +46,18 @@ class FindViewController: UIViewController {
 // 界面布局
 extension FindViewController{
     
-    func initView() {
+    private func initView() {
         self.view.backgroundColor = ColorUtil.rgbColorFromHex(hex: Constants.Colors.COLOR_PRIMARY_WHITE, alpha: 1.0)
         initNavigation()
         initTabBar()
     }
     
-    func initNavigation() {
+    private func initNavigation() {
         // 标题
         self.navigationItem.title = NSLocalizedString("main_tab_find", comment: "")
     }
     
-    func initTabBar() {
+    private func initTabBar() {
         // 添加一个背景图片
         let uImgBackground = UIImageView(image: UIImage(named:"icon_tab_bg"))
         self.view.addSubview(uImgBackground)
@@ -204,7 +204,7 @@ extension FindViewController{
 // 事件绑定
 extension FindViewController{
     
-    func initTarget(){
+    private func initTarget(){
         pagingMenuController.onMove = {
             state in
             switch state {
@@ -232,5 +232,16 @@ extension FindViewController{
                 //                print("")
             }
         }
+    }
+}
+
+// 事件处理（非数据业务）
+extension FindViewController {
+    
+    // 跳转页面
+    func pushViewController(viewController: UIViewController, animated: Bool){
+        self.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(viewController, animated: animated)
+        self.hidesBottomBarWhenPushed = false
     }
 }

@@ -51,4 +51,13 @@ struct Constants {
     struct Device {
         static let SCREEN_WIDTH = UIScreen.main.bounds.size.width
     }
+    
+    // 实例存储
+    struct Instance {
+        static var mainViewController: MainViewController?
+        static var blogViewProtocol: BlogViewProtocol?
+        static var findViewController: FindViewController?
+        static var newsViewController: NewsViewController?
+        static var mineViewController: MineViewController?
+    }
 }
