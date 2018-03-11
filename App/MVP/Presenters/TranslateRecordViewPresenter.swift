@@ -1,8 +1,8 @@
 //
-//  BlogViewPresenter.swift
+//  TranslateRecordViewPresenter.swift
 //  App
 //
-//  Created by kila on 16/02/2018.
+//  Created by kila on 11/03/2018.
 //  Copyright © 2018 kila. All rights reserved.
 //
 
@@ -10,12 +10,12 @@ import UIKit
 import SwiftyJSON
 import ObjectMapper
 
-class BlogViewPresenter: NSObject {
+class TranslateRecordViewPresenter: NSObject {
     
-    let viewProtocol: BlogViewProtocol?
+    let viewProtocol: TranslateRecordViewProtocol?
     
     // 构造函数
-    init(viewProtocol: BlogViewProtocol) {
+    init(viewProtocol: TranslateRecordViewProtocol) {
         self.viewProtocol = viewProtocol
     }
     
@@ -25,15 +25,14 @@ class BlogViewPresenter: NSObject {
     func refresh(){
         let pageIndex = viewProtocol?.getPageIndex()
         let pageSize = viewProtocol?.getPageSize()
-        let userID = ""
-        BlogService.list(pageIndex: pageIndex!, pageSize: pageSize!, userID: userID, callback:{(data: Any) -> Void in
+        let userID = "1000010000000007"
+        TranslateRecordService.list(pageIndex: pageIndex!, pageSize: pageSize!, userID: userID, callback:{(data: Any) -> Void in
             let json = JSON(data)
             let jsonArray = json.arrayValue
-            var list = [Blog]()
+            var list = [TranslateRecord]()
             for raw in jsonArray{
-                let blog = Blog(JSONString: raw.rawString()!)
-                blog?.user = User(JSONString: raw.rawString()!)
-                list.append(blog!)
+                let item = TranslateRecord(JSONString: raw.rawString()!)
+                list.append(item!)
             }
             self.viewProtocol?.refresh(list: list)
         })
@@ -44,14 +43,13 @@ class BlogViewPresenter: NSObject {
         let pageIndex = viewProtocol?.getPageIndex()
         let pageSize = viewProtocol?.getPageSize()
         let userID = ""
-        BlogService.list(pageIndex: pageIndex!, pageSize: pageSize!, userID: userID, callback:{(data: Any) -> Void in
+        TranslateRecordService.list(pageIndex: pageIndex!, pageSize: pageSize!, userID: userID, callback:{(data: Any) -> Void in
             let json = JSON(data)
             let jsonArray = json.arrayValue
-            var list = [Blog]()
+            var list = [TranslateRecord]()
             for raw in jsonArray{
-                let blog = Blog(JSONString: raw.rawString()!)
-                blog?.user = User(JSONString: raw.rawString()!)
-                list.append(blog!)
+                let item = TranslateRecord(JSONString: raw.rawString()!)
+                list.append(item!)
             }
             self.viewProtocol?.load(list: list)
         })

@@ -1,16 +1,16 @@
 //
-//  BlogService.swift
+//  TranslateRecordService.swift
 //  App
 //
-//  Created by kila on 15/02/2018.
+//  Created by kila on 11/03/2018.
 //  Copyright © 2018 kila. All rights reserved.
 //
 
 import UIKit
 
-class BlogService: NSObject {
-
-    static let MODULE: String = "blog" // 模块
+class TranslateRecordService: NSObject {
+    
+    static let MODULE: String = "translate_record" // 模块
     
     static func list(pageIndex: Int, pageSize: Int, userID: String, callback: @escaping(Any) -> Void) -> Void{
         // 请求

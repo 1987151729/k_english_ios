@@ -60,6 +60,12 @@
 		278E92B42036780F005F4F72 /* BlogViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E92B32036780F005F4F72 /* BlogViewPresenter.swift */; };
 		278E92B62036782F005F4F72 /* BlogViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E92B52036782F005F4F72 /* BlogViewProtocol.swift */; };
 		278E92B82036CEA3005F4F72 /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E92B72036CEA2005F4F72 /* BlogTableViewCell.swift */; };
+		279C2EDF2054AF150036F2CE /* TranslateRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279C2EDE2054AF150036F2CE /* TranslateRecord.swift */; };
+		279C2EE12054B3100036F2CE /* TranslateRecordViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279C2EE02054B3100036F2CE /* TranslateRecordViewPresenter.swift */; };
+		279C2EE32054B3220036F2CE /* TranslateRecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279C2EE22054B3220036F2CE /* TranslateRecordService.swift */; };
+		279C2EE52054B4FF0036F2CE /* TranslateRecordViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279C2EE42054B4FF0036F2CE /* TranslateRecordViewProtocol.swift */; };
+		279C2EE72054B5220036F2CE /* TranslateRecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279C2EE62054B5220036F2CE /* TranslateRecordTableViewCell.swift */; };
+		279C2EE92054B5450036F2CE /* TranslateRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279C2EE82054B5450036F2CE /* TranslateRecordViewController.swift */; };
 		27A2A4C8202E8D2D004F8F94 /* TranslateViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2A4C7202E8D2D004F8F94 /* TranslateViewProtocol.swift */; };
 		27A2A4CA202E8FA1004F8F94 /* TranslateViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2A4C9202E8FA1004F8F94 /* TranslateViewPresenter.swift */; };
 		27A2A4CC202EE0B6004F8F94 /* TranslateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2A4CB202EE0B6004F8F94 /* TranslateService.swift */; };
@@ -162,6 +168,12 @@
 		278E92B32036780F005F4F72 /* BlogViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewPresenter.swift; sourceTree = "<group>"; };
 		278E92B52036782F005F4F72 /* BlogViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewProtocol.swift; sourceTree = "<group>"; };
 		278E92B72036CEA2005F4F72 /* BlogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
+		279C2EDE2054AF150036F2CE /* TranslateRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateRecord.swift; sourceTree = "<group>"; };
+		279C2EE02054B3100036F2CE /* TranslateRecordViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateRecordViewPresenter.swift; sourceTree = "<group>"; };
+		279C2EE22054B3220036F2CE /* TranslateRecordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateRecordService.swift; sourceTree = "<group>"; };
+		279C2EE42054B4FF0036F2CE /* TranslateRecordViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateRecordViewProtocol.swift; sourceTree = "<group>"; };
+		279C2EE62054B5220036F2CE /* TranslateRecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateRecordTableViewCell.swift; sourceTree = "<group>"; };
+		279C2EE82054B5450036F2CE /* TranslateRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateRecordViewController.swift; sourceTree = "<group>"; };
 		27A2A4C7202E8D2D004F8F94 /* TranslateViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewProtocol.swift; sourceTree = "<group>"; };
 		27A2A4C9202E8FA1004F8F94 /* TranslateViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateViewPresenter.swift; sourceTree = "<group>"; };
 		27A2A4CB202EE0B6004F8F94 /* TranslateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateService.swift; sourceTree = "<group>"; };
@@ -357,6 +369,7 @@
 				27A2A4C9202E8FA1004F8F94 /* TranslateViewPresenter.swift */,
 				272EA2F420415F270048E24A /* WordTypeViewPresenter.swift */,
 				271DE3A3204BF177004E2345 /* WordViewPresenter.swift */,
+				279C2EE02054B3100036F2CE /* TranslateRecordViewPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -369,6 +382,7 @@
 				271DE3A1204BF147004E2345 /* Sentence.swift */,
 				27EE426E2043B77600390361 /* SentenceType.swift */,
 				27A2A4CD202EEDD1004F8F94 /* Translate.swift */,
+				279C2EDE2054AF150036F2CE /* TranslateRecord.swift */,
 				276C141F20347037004D524D /* User.swift */,
 				271DE39F204BF115004E2345 /* Word.swift */,
 				272EA2F020415BCD0048E24A /* WordType.swift */,
@@ -387,6 +401,7 @@
 				27A2A4CB202EE0B6004F8F94 /* TranslateService.swift */,
 				271DE3A5204BF18D004E2345 /* WordService.swift */,
 				272EA2F8204160730048E24A /* WordTypeService.swift */,
+				279C2EE22054B3220036F2CE /* TranslateRecordService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -402,6 +417,7 @@
 				27A2A4C7202E8D2D004F8F94 /* TranslateViewProtocol.swift */,
 				272EA2F620415F5D0048E24A /* WordTypeViewProtocol.swift */,
 				271DE3AB204BF1D2004E2345 /* WordViewProtocol.swift */,
+				279C2EE42054B4FF0036F2CE /* TranslateRecordViewProtocol.swift */,
 			);
 			path = ViewProtocols;
 			sourceTree = "<group>";
@@ -421,6 +437,7 @@
 				27DCB99720293D7600D7AF76 /* NewsViewController.swift */,
 				271A3C09203FA18100DC9B16 /* SentenceTypeViewController.swift */,
 				271180A4204D647900770E56 /* SentenceViewController.swift */,
+				279C2EE82054B5450036F2CE /* TranslateRecordViewController.swift */,
 				2730E324202C527100E71B0B /* TranslateViewController.swift */,
 				271A3C07203FA17000DC9B16 /* WordTypeViewController.swift */,
 				271180A2204D646300770E56 /* WordViewController.swift */,
@@ -459,6 +476,7 @@
 				27EE42B02043EE0C00390361 /* MusicTableViewCell.swift */,
 				271DE3B1204BF215004E2345 /* SentenceTableViewCell.swift */,
 				271DE3AF204BF1FE004E2345 /* WordTableViewCell.swift */,
+				279C2EE62054B5220036F2CE /* TranslateRecordTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -825,6 +843,7 @@
 				27A5EE7120305B4500B3BBEC /* Constants.swift in Sources */,
 				271DE3A8204BF1A2004E2345 /* SentenceService.swift in Sources */,
 				278A144C2026FB0500047482 /* ExampleTipsContentView.swift in Sources */,
+				279C2EE72054B5220036F2CE /* TranslateRecordTableViewCell.swift in Sources */,
 				2730E325202C527100E71B0B /* TranslateViewController.swift in Sources */,
 				27A2A4CA202E8FA1004F8F94 /* TranslateViewPresenter.swift in Sources */,
 				27090B6D203AB58C00C9C9D5 /* HxNineGridView.swift in Sources */,
@@ -860,10 +879,12 @@
 				272EA2FC20419B030048E24A /* WordTypeCollectionViewCell.swift in Sources */,
 				27DCB99620293D5E00D7AF76 /* FindViewController.swift in Sources */,
 				27EE42AB2043EDA600390361 /* Music.swift in Sources */,
+				279C2EE92054B5450036F2CE /* TranslateRecordViewController.swift in Sources */,
 				2780B35A201DB81700609001 /* ServicesManager.swift in Sources */,
 				27DCB99C2029535300D7AF76 /* MainNavigationController.swift in Sources */,
 				2748EFF92038691E008E9899 /* ObjectMapperDateTransform.swift in Sources */,
 				278A144B2026FB0500047482 /* ExampleHighlightableContentView.swift in Sources */,
+				279C2EE12054B3100036F2CE /* TranslateRecordViewPresenter.swift in Sources */,
 				278E92B42036780F005F4F72 /* BlogViewPresenter.swift in Sources */,
 				272EA2F720415F5D0048E24A /* WordTypeViewProtocol.swift in Sources */,
 				272A3EE3201D5F2E00EF3958 /* AppDelegate.swift in Sources */,
@@ -878,8 +899,10 @@
 				27DCB99420293D2200D7AF76 /* BlogViewController.swift in Sources */,
 				271A3C08203FA17000DC9B16 /* WordTypeViewController.swift in Sources */,
 				271DE3A0204BF115004E2345 /* Word.swift in Sources */,
+				279C2EE52054B4FF0036F2CE /* TranslateRecordViewProtocol.swift in Sources */,
 				27D4FF71203E59DB009AEB39 /* UIDevice+extension.swift in Sources */,
 				27EE426F2043B77600390361 /* SentenceType.swift in Sources */,
+				279C2EE32054B3220036F2CE /* TranslateRecordService.swift in Sources */,
 				2780B35E201DBA9400609001 /* MainViewController.swift in Sources */,
 				271DE3A4204BF177004E2345 /* WordViewPresenter.swift in Sources */,
 				271DE3A6204BF18D004E2345 /* WordService.swift in Sources */,
@@ -887,6 +910,7 @@
 				278E92B82036CEA3005F4F72 /* BlogTableViewCell.swift in Sources */,
 				27090B6F203AB88100C9C9D5 /* HxNineGridViewCell.swift in Sources */,
 				27EE426B2043B74800390361 /* SentenceTypeCollectionViewCell.swift in Sources */,
+				279C2EDF2054AF150036F2CE /* TranslateRecord.swift in Sources */,
 				27450ECD2039341B0044066A /* ColorUtil.swift in Sources */,
 				27EE42672043B70700390361 /* SentenceTypeViewProtocol.swift in Sources */,
 			);

@@ -74,7 +74,7 @@ extension BlogPublishViewController{
 extension BlogPublishViewController {
     
     private func initTarget(){
-        // 返回
+        // 导航栏-返回
         uBtnNavLeft.addTarget(self,action:#selector(self.back),for:.touchUpInside)
         // 发布
         uBtnNavRight.addTarget(self,action:#selector(self.publish),for:.touchUpInside)
@@ -84,6 +84,7 @@ extension BlogPublishViewController {
 // 事件处理
 extension BlogPublishViewController{
     
+    // 导航栏-返回
     @objc private func back(){
         self.navigationController?.popViewController(animated: true)
     }

@@ -21,7 +21,6 @@ class WordViewController: UIViewController {
     var name: String? //
     var type: Int = 0 // 类型
     private let forCellReuseIdentifier: String = "Cell"
-    private var expandStateList: [Bool]! // 定义数组存储文本的折叠状态
     // 视图属性（对于视图类的属性，在变量名前面加上一个字符“u”作为区分，便于识别。这是本人个人的习惯。）
     private var uBtnNavLeft: UIButton!
     private var uTableView: UITableView?
@@ -136,7 +135,6 @@ extension WordViewController {
     private func initData(){
         presenter = WordViewPresenter.init(viewProtocol: self)
         dataList = [Word]()
-        expandStateList = [Bool]()
         headerRefresh()
     }
 }
@@ -216,7 +214,6 @@ extension WordViewController: WordViewProtocol {
     
     func refresh(list: [Word]) {
         self.dataList = list
-        self.expandStateList = [Bool](repeatElement(false, count: list.count))
         // 重新加载表格数据
         self.uTableView!.reloadData()
         // 结束刷新
@@ -231,7 +228,6 @@ extension WordViewController: WordViewProtocol {
     func load(list: [Word]) {
         if 0 < list.count {
             self.dataList = self.dataList + list
-            self.expandStateList = self.expandStateList + [Bool](repeatElement(false, count: list.count))
             // 重新加载表格数据
             self.uTableView!.reloadData()
         }

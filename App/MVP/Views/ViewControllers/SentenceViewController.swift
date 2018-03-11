@@ -21,7 +21,6 @@ class SentenceViewController: UIViewController {
     var name: String? //
     var type: Int = 0 // 类型
     private let forCellReuseIdentifier: String = "Cell"
-    private var expandStateList: [Bool]! // 定义数组存储文本的折叠状态
     // 视图属性（对于视图类的属性，在变量名前面加上一个字符“u”作为区分，便于识别。这是本人个人的习惯。）
     private var uBtnNavLeft: UIButton!
     private var uTableView: UITableView?
@@ -136,7 +135,6 @@ extension SentenceViewController {
     private func initData(){
         presenter = SentenceViewPresenter.init(viewProtocol: self)
         dataList = [Sentence]()
-        expandStateList = [Bool]()
         headerRefresh()
     }
 }
@@ -215,7 +213,6 @@ extension SentenceViewController: SentenceViewProtocol {
     
     func refresh(list: [Sentence]) {
         self.dataList = list
-        self.expandStateList = [Bool](repeatElement(false, count: list.count))
         // 重新加载表格数据
         self.uTableView!.reloadData()
         // 结束刷新
@@ -230,7 +227,6 @@ extension SentenceViewController: SentenceViewProtocol {
     func load(list: [Sentence]) {
         if 0 < list.count {
             self.dataList = self.dataList + list
-            self.expandStateList = self.expandStateList + [Bool](repeatElement(false, count: list.count))
             // 重新加载表格数据
             self.uTableView!.reloadData()
         }

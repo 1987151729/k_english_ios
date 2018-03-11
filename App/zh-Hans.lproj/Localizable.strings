@@ -157,12 +157,15 @@
 "blog_publish_txt_img"="拖拽图片可调整顺序";
 /* 翻译页面 */
 "translate_title"="翻译";
+"translate_nav_right"="历史记录";
 "translate_txt_ch"="中文";
 "translate_txt_en"="英文";
 "translate_edit_hint_content"="请输入您想翻译的文字";
 "translate_txt_original_word"="翻译内容：";
 "translate_txt_translation_word"="翻译结果：";
 "translate_tips_content_empty"="请填写内容";
+/* 翻译记录页面 */
+"translate_record_title"="翻译记录";
 /* 音乐详情页面 */
 "music_info_txt_description"="简介：";
 "music_info_txt_lyric"="歌词：";

@@ -21,6 +21,7 @@ class TranslateViewController: UIViewController {
     var translate: Translate?
     // 视图属性（对于视图类的属性，在变量名前面加上一个字符“u”作为区分，便于识别。这是本人个人的习惯。）
     private var uBtnNavLeft: UIButton!
+    private var uBtnNavRight: UIButton!
     private var uImgTopBarBackground: UIImageView!
     private var uImgIcon: UIImageView!
     private var uLabelA: UILabel!
@@ -79,10 +80,16 @@ extension TranslateViewController{
         // 标题
         self.navigationItem.title = NSLocalizedString("translate_title", comment: "")
         // 左按钮
-        uBtnNavLeft = UIButton(frame:CGRect(x:0, y:0, width:18, height:18))
+        uBtnNavLeft = UIButton(frame:CGRect(x: 0, y: 0, width: 18, height: 18))
         uBtnNavLeft.setImage(UIImage(named: "icon_head_back"), for: .normal)
         let barButtonLeft = UIBarButtonItem(customView: uBtnNavLeft)
         self.navigationItem.leftBarButtonItem = barButtonLeft
+        // 右按钮
+        uBtnNavRight = UIButton(frame:CGRect(x: 0, y: 0, width: 18, height: 18))
+        uBtnNavRight.setTitle(NSLocalizedString("translate_nav_right", comment: ""), for: .normal)
+        uBtnNavRight.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        let barButtonRight = UIBarButtonItem(customView: uBtnNavRight)
+        self.navigationItem.rightBarButtonItems = [barButtonRight]
     }
     
     private func initBody() {
@@ -240,6 +247,8 @@ extension TranslateViewController{
         self.view.addGestureRecognizer(UITapGestureRecognizer(target:self, action:#selector(self.handleTap(sender:))))
         // 导航栏-返回
         uBtnNavLeft.addTarget(self, action:#selector(self.back), for:.touchUpInside)
+        // 导航栏-历史记录
+        uBtnNavRight.addTarget(self, action:#selector(self.goToTranslateRecord), for:.touchUpInside)
         // 切换翻译类型
         let topBarTap = UITapGestureRecognizer(target:self, action:#selector(self.changeTab))
         uViewTopBar.isUserInteractionEnabled = true
@@ -262,9 +271,17 @@ extension TranslateViewController{
 // 事件处理（非数据业务）
 extension TranslateViewController{
     
+    // 导航栏-返回
     @objc private func back(){
         //        self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    // 导航栏-历史记录
+    @objc private func goToTranslateRecord(){
+        self.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(TranslateRecordViewController(), animated: true)
+        self.hidesBottomBarWhenPushed = false
     }
     
     // 点击界面
@@ -278,7 +295,7 @@ extension TranslateViewController{
     
     // 切换翻译类型
     @objc private func changeTab() {
-        if TranslateType.EnToCh.rawValue==type {
+        if TranslateType.EnToCh.rawValue == type {
             uLabelA.text = NSLocalizedString("translate_txt_ch", comment: "")
             uLabelB.text = NSLocalizedString("translate_txt_en", comment: "")
             type = TranslateType.ChToEn.rawValue
@@ -294,7 +311,7 @@ extension TranslateViewController{
     @objc private func play(){
         if nil != self.translate{
             var url: String?
-            if TranslateType.EnToCh.rawValue==type {
+            if TranslateType.EnToCh.rawValue == type {
                 url = self.translate?.speakUrl
             }
             else{

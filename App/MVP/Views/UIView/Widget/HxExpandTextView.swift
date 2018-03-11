@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 
+// 可折叠展开文本
 class HxExpandTextView: UIView {
 
     /*

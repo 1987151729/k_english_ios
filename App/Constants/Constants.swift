@@ -13,7 +13,7 @@ struct Constants {
     // 配置
     struct Configs {
         static let DEVICE = 2 // 设备类型（1=安卓，2=苹果）
-        static let VERSION = "1.0.9" // 客户端版本
+        static let VERSION = "1.0.0" // 客户端版本
         static let CHANNEL = "guanwang" // 客户端渠道
         // 接口配置
         // 正式用
