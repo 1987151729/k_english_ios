@@ -60,6 +60,8 @@
 		278E92B42036780F005F4F72 /* BlogViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E92B32036780F005F4F72 /* BlogViewPresenter.swift */; };
 		278E92B62036782F005F4F72 /* BlogViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E92B52036782F005F4F72 /* BlogViewProtocol.swift */; };
 		278E92B82036CEA3005F4F72 /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278E92B72036CEA2005F4F72 /* BlogTableViewCell.swift */; };
+		27921BF42056B0F000AA181E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27921BF32056B0F000AA181E /* UserService.swift */; };
+		27921BF62056B11500AA181E /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27921BF52056B11500AA181E /* LoginViewPresenter.swift */; };
 		279C2EDF2054AF150036F2CE /* TranslateRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279C2EDE2054AF150036F2CE /* TranslateRecord.swift */; };
 		279C2EE12054B3100036F2CE /* TranslateRecordViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279C2EE02054B3100036F2CE /* TranslateRecordViewPresenter.swift */; };
 		279C2EE32054B3220036F2CE /* TranslateRecordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279C2EE22054B3220036F2CE /* TranslateRecordService.swift */; };
@@ -168,6 +170,8 @@
 		278E92B32036780F005F4F72 /* BlogViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewPresenter.swift; sourceTree = "<group>"; };
 		278E92B52036782F005F4F72 /* BlogViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewProtocol.swift; sourceTree = "<group>"; };
 		278E92B72036CEA2005F4F72 /* BlogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
+		27921BF32056B0F000AA181E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		27921BF52056B11500AA181E /* LoginViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
 		279C2EDE2054AF150036F2CE /* TranslateRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateRecord.swift; sourceTree = "<group>"; };
 		279C2EE02054B3100036F2CE /* TranslateRecordViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateRecordViewPresenter.swift; sourceTree = "<group>"; };
 		279C2EE22054B3220036F2CE /* TranslateRecordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateRecordService.swift; sourceTree = "<group>"; };
@@ -370,6 +374,7 @@
 				272EA2F420415F270048E24A /* WordTypeViewPresenter.swift */,
 				271DE3A3204BF177004E2345 /* WordViewPresenter.swift */,
 				279C2EE02054B3100036F2CE /* TranslateRecordViewPresenter.swift */,
+				27921BF52056B11500AA181E /* LoginViewPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -402,6 +407,7 @@
 				271DE3A5204BF18D004E2345 /* WordService.swift */,
 				272EA2F8204160730048E24A /* WordTypeService.swift */,
 				279C2EE22054B3220036F2CE /* TranslateRecordService.swift */,
+				27921BF32056B0F000AA181E /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -809,6 +815,7 @@
 				"${BUILT_PRODUCTS_DIR}/SKPhotoBrowser/SKPhotoBrowser.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
@@ -824,6 +831,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SKPhotoBrowser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
@@ -865,6 +873,7 @@
 				27EE42B12043EE0C00390361 /* MusicTableViewCell.swift in Sources */,
 				278A144D2026FB0500047482 /* ExampleIrregularityContentView.swift in Sources */,
 				27A2A4CC202EE0B6004F8F94 /* TranslateService.swift in Sources */,
+				27921BF42056B0F000AA181E /* UserService.swift in Sources */,
 				271DE3AE204BF1E4004E2345 /* SentenceViewProtocol.swift in Sources */,
 				27A2A4CE202EEDD1004F8F94 /* Translate.swift in Sources */,
 				27A2A4C8202E8D2D004F8F94 /* TranslateViewProtocol.swift in Sources */,
@@ -877,6 +886,7 @@
 				272EA2F9204160730048E24A /* WordTypeService.swift in Sources */,
 				271180A5204D647900770E56 /* SentenceViewController.swift in Sources */,
 				272EA2FC20419B030048E24A /* WordTypeCollectionViewCell.swift in Sources */,
+				27921BF62056B11500AA181E /* LoginViewPresenter.swift in Sources */,
 				27DCB99620293D5E00D7AF76 /* FindViewController.swift in Sources */,
 				27EE42AB2043EDA600390361 /* Music.swift in Sources */,
 				279C2EE92054B5450036F2CE /* TranslateRecordViewController.swift in Sources */,

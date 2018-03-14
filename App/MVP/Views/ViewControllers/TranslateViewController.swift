@@ -18,7 +18,7 @@ class TranslateViewController: UIViewController {
     // 非视图属性
     private var presenter: TranslateViewPresenter?
     private var type: Int = TranslateType.EnToCh.rawValue
-    var translate: Translate?
+    private var translate: Translate?
     // 视图属性（对于视图类的属性，在变量名前面加上一个字符“u”作为区分，便于识别。这是本人个人的习惯。）
     private var uBtnNavLeft: UIButton!
     private var uBtnNavRight: UIButton!
@@ -178,7 +178,7 @@ extension TranslateViewController{
             make.edges.equalTo(uViewTopBar).inset(UIEdgeInsetsMake(0, 0, 0, 0))
         }
         uImgIcon.snp.updateConstraints { (make) -> Void in
-            make.size.equalTo(CGSize(width:26, height:16))
+            make.size.equalTo(CGSize(width: 26, height: 16))
             make.center.equalTo(uViewTopBar)
         }
         uLabelA.snp.updateConstraints { (make) -> Void in

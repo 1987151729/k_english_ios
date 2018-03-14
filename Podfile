@@ -19,6 +19,7 @@ target 'App' do
   pod 'Kingfisher', '~> 4.0'
   pod 'SKPhotoBrowser'
   pod "PagingMenuController"
+  pod 'SwiftyUserDefaults'
 
   target 'AppTests' do
     inherit! :search_paths
